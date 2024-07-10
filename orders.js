@@ -1,20 +1,20 @@
 const Orders = [
     {
-        productName: 'JavaScript Tutorial',
+        productName: 'Playera de algodón',
         productNumber: '85743',
-        paymentStatus: 'Due',
-        status: 'Pending'
+        paymentStatus: 'Pendiente',
+        status: 'Pendiente'
     },
     {
-        productName: 'CSS Full Course',
+        productName: 'Playera manga larga',
         productNumber: '97245',
-        paymentStatus: 'Refunded',
-        status: 'Declined'
+        paymentStatus: 'Reenbolsado',
+        status: 'Declinado'
     },
     {
-        productName: 'Flex-Box Tutorial',
+        productName: 'Camisa cuello polo',
         productNumber: '36452',
-        paymentStatus: 'Paid',
-        status: 'Active'
+        paymentStatus: 'Pagado',
+        status: 'Activo'
     },
 ]
