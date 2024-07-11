@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
     <link rel="stylesheet" href="styles/index.css">
-    <title>Responsive Dashboard Design #1 | AsmrProg</title>
+    <title>Dashboard println</title>
 </head>
 
 <body>
@@ -16,8 +16,9 @@
         <aside>
             <div class="toggle">
                 <div class="logo">
-                    <img src="img/logo.jpg.jpeg">
-                    <h2>Print<span class="danger">Ln</span></h2>
+                    <a href="index.html">
+                        <img src="img/logo.jpg.jpeg">
+                    </a>
                 </div>
                 <div class="close" id="close-btn">
                     <span class="material-icons-sharp">
@@ -27,66 +28,89 @@
             </div>
 
             <div class="sidebar">
-                <a href="#">
+                <a href="index.html" class="active">
                     <span class="material-icons-sharp">
                         dashboard
                     </span>
                     <h3>Dashboard</h3>
                 </a>
-                <a href="#">
+                <a href="users.html">
                     <span class="material-icons-sharp">
                         person_outline
                     </span>
-                    <h3>Users</h3>
+                    <h3>Clientes</h3>
                 </a>
-                <a href="#">
+                <a href="sales.html">
                     <span class="material-icons-sharp">
-                        receipt_long
+                        paid
                     </span>
-                    <h3>History</h3>
+                    <h3>Ventas</h3>
                 </a>
-                <a href="#" class="active">
+                <a href="analytics.html" >
                     <span class="material-icons-sharp">
                         insights
                     </span>
-                    <h3>Analytics</h3>
+                    <h3>Analíticas</h3>
                 </a>
-                <a href="#">
-                    <span class="material-icons-sharp">
-                        mail_outline
-                    </span>
-                    <h3>Tickets</h3>
-                    <span class="message-count">27</span>
-                </a>
-                <a href="#">
+                <a href="products.html">
                     <span class="material-icons-sharp">
                         inventory
                     </span>
-                    <h3>Sale List</h3>
+                    <h3>Productos</h3>
                 </a>
-                <a href="#">
+                <a href="providers.html">
+                    <span class="material-icons-sharp">
+                        handshake
+                    </span>
+                    <h3>Proveedores</h3>
+                </a>
+                <a href="orders.html">
+                    <span class="material-icons-sharp">
+                        inventory_2
+                    </span>
+                    <h3>Ordenes</h3>
+                </a>
+                <a href="custom.html">
+                    <span class="material-icons-sharp">
+                        brush
+                    </span>
+                    <h3>Custom</h3>
+                </a>
+                <a href="reports.html">
                     <span class="material-icons-sharp">
                         report_gmailerrorred
                     </span>
-                    <h3>Reports</h3>
+                    <h3>Reportes</h3>
                 </a>
-                <a href="#">
+                <a href="membership.html">
+                    <span class="material-icons-sharp">
+                        loyalty
+                    </span>
+                    <h3>Membresías</h3>
+                </a>
+                <a href="settings.html">
                     <span class="material-icons-sharp">
                         settings
                     </span>
-                    <h3>Settings</h3>
+                    <h3>Config.</h3>
                 </a>
-                <a href="#">
+                <a href="reviews.html">
+                    <span class="material-icons-sharp">
+                        rate_review
+                    </span>
+                    <h3>Reseñas</h3>
+                </a>
+                <a href="login.html">
                     <span class="material-icons-sharp">
                         add
                     </span>
-                    <h3>New Login</h3>
+                    <h3>Nuevo Login</h3>
                 </a>
                 <a href="#">
                     <span class="material-icons-sharp">
                         logout
                     </span>
-                    <h3>Logout</h3>
+                    <h3>Salir</h3>
                 </a>
             </div>
         </aside>
@@ -94,13 +118,14 @@
 
         <!-- Main Content -->
         <main>
-            <h1>Analytics</h1>
+            <h1>Analíticas
+            </h1>
             <!-- Analyses -->
             <div class="analyse">
                 <div class="sales">
                     <div class="status">
                         <div class="info">
-                            <h3>Total Sales</h3>
+                            <h3>Ventas totales</h3>
                             <h1>$65,024</h1>
                         </div>
                         <div class="progresss">
@@ -116,7 +141,7 @@
                 <div class="visits">
                     <div class="status">
                         <div class="info">
-                            <h3>Site Visit</h3>
+                            <h3>Visitas en el sitio</h3>
                             <h1>24,981</h1>
                         </div>
                         <div class="progresss">
@@ -132,7 +157,7 @@
                 <div class="searches">
                     <div class="status">
                         <div class="info">
-                            <h3>Searches</h3>
+                            <h3>Búsquedas</h3>
                             <h1>14,147</h1>
                         </div>
                         <div class="progresss">
@@ -148,29 +173,93 @@
             </div>
             <!-- End of Analyses -->
 
+            <!-- New Products Section -->
+            <div class="new-users">
+                <h2>Productos nuevos</h2>
+                <div class="user-list">
+                    <div class="user">
+                        <img src="img/NBA.jpg">
+                        <h2>Playera NBA</h2>
+                        <p>50 piezas</p>
+                    </div>
+                    <div class="user">
+                        <img src="img/cuellov.jpg">
+                        <h2>Playera cuello V</h2>
+                        <p>105 piezas</p>
+                    </div>
+                    <div class="user">
+                        <img src="img/Polo.webp">
+                        <h2>Camisa Polo</h2>
+                        <p>44 piezas</p>
+                    </div>
+                    <div class="user">
+                        <a href="products.html">
+                            <img src="img/plus.png">
+                            <h2>Añadir</h2>
+                            <p>Usuario nuevo</p></a>
+                    </div>
+                </div>
+            </div>
+            <!-- End of New Products Section -->
             <!-- New Users Section -->
             <div class="new-users">
-                <h2>New Users</h2>
+                <h2>Usuarios nuevos</h2>
                 <div class="user-list">
                     <div class="user">
                         <img src="img/profile-1.jpg">
                         <h2>Jack</h2>
-                        <p>54 Min Ago</p>
+                        <p>Hace 54 Min</p>
                     </div>
                     <div class="user">
                         <img src="img/profile-3.jpg">
                         <h2>Amir</h2>
-                        <p>3 Hours Ago</p>
+                        <p>Hace 3 Horas</p>
                     </div>
                     <div class="user">
                         <img src="img/profile-4.jpg">
                         <h2>Ember</h2>
-                        <p>6 Hours Ago</p>
+                        <p>Hace 6 horas</p>
                     </div>
                     <div class="user">
-                        <img src="img/plus.png">
-                        <h2>More</h2>
-                        <p>New User</p>
+                        <a href="users.html">
+                            <img src="img/plus.png">
+                            <h2>Añadir</h2>
+                            <p>Usuario nuevo</p>
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+            <!-- End of New Users Section -->
+            <!-- New Users Section -->
+            <div class="new-users">
+                <h2>Proveedores</h2>
+                <div class="user-list">
+                    <div class="user">
+                        <img src="img/images.jpeg">
+                        <h2>tela</h2>
+                        <p>4492332876</p>
+                    </div>
+                    <div class="user">
+                        <img src="img/91y0owIpxMS.jpg">
+                        <h2>Pintura</h2>
+                        <p>4492332876</p>
+                    </div>
+                    <div class="user">
+                        <img src="img/images (1).jpeg">
+                        <h2>diseñador</h2>
+                        <p>4492332876</p>
+                    </div>
+                    <div class="user">
+                        <a href="">
+                            <a href="providers.html">
+                                <img src="img/plus.png">
+                                <h2>Añadir</h2>
+                                <p>Proveedor</p>
+                            </a>
+                            
+                        </a>
+                        
                     </div>
                 </div>
             </div>
@@ -178,20 +267,20 @@
 
             <!-- Recent Orders Table -->
             <div class="recent-orders">
-                <h2>Recent Orders</h2>
+                <h2>Ordenes recientes</h2>
                 <table>
                     <thead>
                         <tr>
-                            <th>Course Name</th>
-                            <th>Course Number</th>
-                            <th>Payment</th>
+                            <th>Producto</th>
+                            <th>Número de venta</th>
+                            <th>Pago</th>
                             <th>Status</th>
                             <th></th>
                         </tr>
                     </thead>
                     <tbody></tbody>
                 </table>
-                <a href="#">Show All</a>
+                <a href="orders.html">Show All</a>
             </div>
             <!-- End of Recent Orders -->
 
@@ -217,11 +306,13 @@
 
                 <div class="profile">
                     <div class="info">
-                        <p>Hey, <b>Mayabi</b></p>
+                        <p>Hey, <a href="profile.html"><b>Mayabi</b></a></p>
                         <small class="text-muted">Admin</small>
                     </div>
                     <div class="profile-photo">
-                        <img src="img/profile-3.jpg">
+                        <a href="profile.html">
+                            <img src="img/Mayabi.jpg">
+                        </a>
                     </div>
                 </div>
 
@@ -238,7 +329,7 @@
 
             <div class="reminders">
                 <div class="header">
-                    <h2>Reminders</h2>
+                    <h2>Recordatorios</h2>
                     <span class="material-icons-sharp">
                         notifications_none
                     </span>
@@ -252,7 +343,7 @@
                     </div>
                     <div class="content">
                         <div class="info">
-                            <h3>Workshop</h3>
+                            <h3>Taller</h3>
                             <small class="text_muted">
                                 08:00 AM - 12:00 PM
                             </small>
@@ -271,7 +362,7 @@
                     </div>
                     <div class="content">
                         <div class="info">
-                            <h3>Workshop</h3>
+                            <h3>Taller</h3>
                             <small class="text_muted">
                                 08:00 AM - 12:00 PM
                             </small>
@@ -287,7 +378,7 @@
                         <span class="material-icons-sharp">
                             add
                         </span>
-                        <h3>Add Reminder</h3>
+                        <h3>Añadir recordatorio</h3>
                     </div>
                 </div>
 
@@ -298,8 +389,9 @@
 
     </div>
 
-    <script src="orders.js"></script>
-    <script src="index.js"></script>
+    <script src="javascript/orders.js"></script>
+    <script src="javascript/index.js"></script>
+    
 </body>
 
 </html>
