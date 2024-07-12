@@ -1,397 +1,232 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
-    <link rel="stylesheet" href="styles/sales.css">
-    <title>Dashboard println</title>
+    <title>Panel de Ventas - Administrador</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Tu archivo CSS personalizado -->
+    <link href="styles/sales.css" rel="stylesheet">
 </head>
-
 <body>
 
-    <div class="container">
-        <!-- Sidebar Section -->
-        <aside>
-            <div class="toggle">
-                <div class="logo">
-                    <a href="index.html">
-                        <img src="img/logo.jpg.jpeg">
-                    </a>
-                </div>
-                <div class="close" id="close-btn">
-                    <span class="material-icons-sharp">
-                        close
-                    </span>
-                </div>
-            </div>
 
-            <div class="sidebar">
-                <a href="index.html" >
-                    <span class="material-icons-sharp">
-                        dashboard
-                    </span>
-                    <h3>Dashboard</h3>
-                </a>
-                <a href="users.html">
-                    <span class="material-icons-sharp">
-                        person_outline
-                    </span>
-                    <h3>Clientes</h3>
-                </a>
-                <a href="sales.html"class="active">
-                    <span class="material-icons-sharp">
-                        paid
-                    </span>
-                    <h3>Ventas</h3>
-                </a>
-                <a href="analytics.html" >
-                    <span class="material-icons-sharp">
-                        insights
-                    </span>
-                    <h3>Analíticas</h3>
-                </a>
-                <a href="products.html">
-                    <span class="material-icons-sharp">
-                        inventory
-                    </span>
-                    <h3>Productos</h3>
-                </a>
-                <a href="providers.html">
-                    <span class="material-icons-sharp">
-                        handshake
-                    </span>
-                    <h3>Proveedores</h3>
-                </a>
-                <a href="orders.html">
-                    <span class="material-icons-sharp">
-                        inventory_2
-                    </span>
-                    <h3>Ordenes</h3>
-                </a>
-                <a href="custom.html">
-                    <span class="material-icons-sharp">
-                        brush
-                    </span>
-                    <h3>Custom</h3>
-                </a>
-                <a href="reports.html">
-                    <span class="material-icons-sharp">
-                        report_gmailerrorred
-                    </span>
-                    <h3>Reportes</h3>
-                </a>
-                <a href="membership.html">
-                    <span class="material-icons-sharp">
-                        loyalty
-                    </span>
-                    <h3>Membresías</h3>
-                </a>
-                <a href="settigs.html">
-                    <span class="material-icons-sharp">
-                        settings
-                    </span>
-                    <h3>Config.</h3>
-                </a>
-                <a href="reviews.html">
-                    <span class="material-icons-sharp">
-                        rate_review
-                    </span>
-                    <h3>Reseñas</h3>
-                </a>
-                <a href="login.html">
-                    <span class="material-icons-sharp">
-                        add
-                    </span>
-                    <h3>Nuevo Login</h3>
-                </a>
-                <a href="#">
-                    <span class="material-icons-sharp">
-                        logout
-                    </span>
-                    <h3>Salir</h3>
-                </a>
-            </div>
-        </aside>
-        <!-- End of Sidebar Section -->
+<div class="jumbotron jumbotron-custom-tshirts">
+  <div class="container">
+    <h1 class="display-4">Panel de Ventas para Playeras Personalizadas</h1>
+    <p class="lead">Bienvenido al panel administrativo. Aquí puedes visualizar y analizar las ventas de playeras personalizadas.</p>
+  </div>
+</div>
 
-        <!-- Main Content -->
-        <main>
-            <h1>Analíticas
-            </h1>
-            <!-- Analyses -->
-            <div class="analyse">
-                <div class="sales">
-                    <div class="status">
-                        <div class="info">
-                            <h3>Ventas totales</h3>
-                            <h1>$65,024</h1>
-                        </div>
-                        <div class="progresss">
-                            <svg>
-                                <circle cx="38" cy="38" r="36"></circle>
-                            </svg>
-                            <div class="percentage">
-                                <p>+81%</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="visits">
-                    <div class="status">
-                        <div class="info">
-                            <h3>Visitas en el sitio</h3>
-                            <h1>24,981</h1>
-                        </div>
-                        <div class="progresss">
-                            <svg>
-                                <circle cx="38" cy="38" r="36"></circle>
-                            </svg>
-                            <div class="percentage">
-                                <p>-48%</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="searches">
-                    <div class="status">
-                        <div class="info">
-                            <h3>Búsquedas</h3>
-                            <h1>14,147</h1>
-                        </div>
-                        <div class="progresss">
-                            <svg>
-                                <circle cx="38" cy="38" r="36"></circle>
-                            </svg>
-                            <div class="percentage">
-                                <p>+21%</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<!-- Contenido principal -->
+<div class="container-fluid mt-4">
+  <div class="row custom-section">
+    <div class="col">
+      <section id="dashboard">
+        <h2>Resumen</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title custom-card-title">Número de Pedidos Totales</h5>
+                <p class="card-text custom-card-text">Total: 500 pedidos</p>
+              </div>
             </div>
-            <!-- End of Analyses -->
-
-            <!-- New Products Section -->
-            <div class="new-users">
-                <h2>Productos nuevos</h2>
-                <div class="user-list">
-                    <div class="user">
-                        <img src="img/NBA.jpg">
-                        <h2>Playera NBA</h2>
-                        <p>50 piezas</p>
-                    </div>
-                    <div class="user">
-                        <img src="img/cuellov.jpg">
-                        <h2>Playera cuello V</h2>
-                        <p>105 piezas</p>
-                    </div>
-                    <div class="user">
-                        <img src="img/Polo.webp">
-                        <h2>Camisa Polo</h2>
-                        <p>44 piezas</p>
-                    </div>
-                    <div class="user">
-                        <a href="products.html">
-                            <img src="img/plus.png">
-                            <h2>Añadir</h2>
-                            <p>Usuario nuevo</p></a>
-                    </div>
-                </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title custom-card-title">Número de Playeras Vendidas</h5>
+                <p class="card-text custom-card-text">Mes: 2,000 | Semana: 500 | Día: 100</p>
+              </div>
             </div>
-            <!-- End of New Products Section -->
-            <!-- New Users Section -->
-            <div class="new-users">
-                <h2>Usuarios nuevos</h2>
-                <div class="user-list">
-                    <div class="user">
-                        <img src="img/profile-1.jpg">
-                        <h2>Jack</h2>
-                        <p>Hace 54 Min</p>
-                    </div>
-                    <div class="user">
-                        <img src="img/profile-3.jpg">
-                        <h2>Amir</h2>
-                        <p>Hace 3 Horas</p>
-                    </div>
-                    <div class="user">
-                        <img src="img/profile-4.jpg">
-                        <h2>Ember</h2>
-                        <p>Hace 6 horas</p>
-                    </div>
-                    <div class="user">
-                        <a href="users.html">
-                            <img src="img/plus.png">
-                            <h2>Añadir</h2>
-                            <p>Usuario nuevo</p>
-                        </a>
-                        
-                    </div>
-                </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title custom-card-title">Ventas por Canal</h5>
+                <ul class="list-group">
+                  <li class="list-group-item custom-list-group-item">Online: $50,000</li>
+                  <li class="list-group-item custom-list-group-item">Tienda física: $20,000</li>
+                  <li class="list-group-item custom-list-group-item">Eventos: $10,000</li>
+                </ul>
+              </div>
             </div>
-            <!-- End of New Users Section -->
-            <!-- New Users Section -->
-            <div class="new-users">
-                <h2>Proveedores</h2>
-                <div class="user-list">
-                    <div class="user">
-                        <img src="img/images.jpeg">
-                        <h2>tela</h2>
-                        <p>4492332876</p>
-                    </div>
-                    <div class="user">
-                        <img src="img/91y0owIpxMS.jpg">
-                        <h2>Pintura</h2>
-                        <p>4492332876</p>
-                    </div>
-                    <div class="user">
-                        <img src="img/images (1).jpeg">
-                        <h2>diseñador</h2>
-                        <p>4492332876</p>
-                    </div>
-                    <div class="user">
-                        <a href="">
-                            <a href="providers.html">
-                                <img src="img/plus.png">
-                                <h2>Añadir</h2>
-                                <p>Proveedor</p>
-                            </a>
-                            
-                        </a>
-                        
-                    </div>
-                </div>
-            </div>
-            <!-- End of New Users Section -->
-
-            <!-- Recent Orders Table -->
-            <div class="recent-orders">
-                <h2>Ordenes recientes</h2>
-                <table>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <div class="row custom-section">
+    <div class="col">
+      <section id="ingresos">
+        <h2>Ingresos Totales</h2>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title custom-card-title">Número de Ingresos Totales</h5>
+            <p class="card-text custom-card-text">Total: $80,000</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <div class="row custom-section">
+    <div class="col-md-6">
+      <section id="unidades">
+        <h2>Unidades Vendidas por Semana</h2>
+        <div class="chart-container chart-container-custom">
+          <canvas id="chartVentasPorSemana"></canvas>
+        </div>
+        <button id="actualizarDatos" class="btn btn-primary">Actualizar Datos</button>
+      </section>
+    </div>
+    <div class="col-md-6">
+      <section id="canal">
+        <h2>Ventas por Canal</h2>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title custom-card-title">Ventas por Canal</h5>
+            <ul class="list-group">
+              <li class="list-group-item custom-list-group-item">Online: $50,000</li>
+              <li class="list-group-item custom-list-group-item">Tienda física: $20,000</li>
+              <li class="list-group-item custom-list-group-item">Eventos: $10,000</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <div class="row custom-section">
+    <div class="col">
+      <section id="tendencias">
+        <h2>Análisis de Tendencias</h2>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title custom-card-title">Tendencias de Ventas</h5>
+            <p class="card-text custom-card-text">Se observa un incremento del 10% en las ventas de playeras personalizadas este mes.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <div class="row custom-section">
+    <div class="col">
+      <section id="recurrentes">
+        <h2>Clientes Recurrentes</h2>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title custom-card-title">Clientes Recurrentes</h5>
+            <p class="card-text custom-card-text">El 25% de los clientes realiza compras recurrentes de playeras personalizadas cada mes.</p>
+            <div class="table-responsive">
+                <table class="table table-bordered">
                     <thead>
                         <tr>
-                            <th>Producto</th>
-                            <th>Número de venta</th>
-                            <th>Pago</th>
-                            <th>Status</th>
-                            <th></th>
+                            <th>Nombre del Usuario</th>
+                            <th>Número de Ventas</th>
                         </tr>
                     </thead>
-                    <tbody></tbody>
+                    <tbody>
+                        <tr>
+                            <td>Juan Pérez</td>
+                            <td>15</td>
+                        </tr>
+                        <tr>
+                            <td>Ana Gómez</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>Carlos López</td>
+                            <td>9</td>
+                        </tr>
+                        <tr>
+                            <td>María Fernández</td>
+                            <td>8</td>
+                        </tr>
+                        <tr>
+                            <td>José Martínez</td>
+                            <td>7</td>
+                        </tr>
+                    </tbody>
                 </table>
-                <a href="orders.html">Show All</a>
             </div>
-            <!-- End of Recent Orders -->
-
-        </main>
-        <!-- End of Main Content -->
-
-        <!-- Right Section -->
-        <div class="right-section">
-            <div class="nav">
-                <button id="menu-btn">
-                    <span class="material-icons-sharp">
-                        menu
-                    </span>
-                </button>
-                <div class="dark-mode">
-                    <span class="material-icons-sharp active">
-                        light_mode
-                    </span>
-                    <span class="material-icons-sharp">
-                        dark_mode
-                    </span>
-                </div>
-
-                <div class="profile">
-                    <div class="info">
-                        <p>Hey, <a href="profile.html"><b>Mayabi</b></a></p>
-                        <small class="text-muted">Admin</small>
-                    </div>
-                    <div class="profile-photo">
-                        <a href="profile.html">
-                            <img src="img/Mayabi.jpg">
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-            <!-- End of Nav -->
-
-            <div class="user-profile">
-                <div class="logo">
-                    <img src="img/logo.jpg.jpeg">
-                    <h2>println</h2>
-                    <p>Fullstack Web Developer</p>
-                </div>
-            </div>
-
-            <div class="reminders">
-                <div class="header">
-                    <h2>Recordatorios</h2>
-                    <span class="material-icons-sharp">
-                        notifications_none
-                    </span>
-                </div>
-
-                <div class="notification">
-                    <div class="icon">
-                        <span class="material-icons-sharp">
-                            volume_up
-                        </span>
-                    </div>
-                    <div class="content">
-                        <div class="info">
-                            <h3>Taller</h3>
-                            <small class="text_muted">
-                                08:00 AM - 12:00 PM
-                            </small>
-                        </div>
-                        <span class="material-icons-sharp">
-                            more_vert
-                        </span>
-                    </div>
-                </div>
-
-                <div class="notification deactive">
-                    <div class="icon">
-                        <span class="material-icons-sharp">
-                            edit
-                        </span>
-                    </div>
-                    <div class="content">
-                        <div class="info">
-                            <h3>Taller</h3>
-                            <small class="text_muted">
-                                08:00 AM - 12:00 PM
-                            </small>
-                        </div>
-                        <span class="material-icons-sharp">
-                            more_vert
-                        </span>
-                    </div>
-                </div>
-
-                <div class="notification add-reminder">
-                    <div>
-                        <span class="material-icons-sharp">
-                            add
-                        </span>
-                        <h3>Añadir recordatorio</h3>
-                    </div>
-                </div>
-
-            </div>
-
+          </div>
         </div>
-
-
+      </section>
     </div>
+  </div>
+  <div class="row custom-section">
+    <div class="col">
+      <section id="devoluciones">
+        <h2>Devoluciones</h2>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title custom-card-title">Estadísticas de Devoluciones</h5>
+            <p class="card-text custom-card-text">Tasa de devolución: 2% | Playeras devueltas: 10</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
 
-    <script src="javascript/orders.js"></script>
-    <script src="javascript/index.js"></script>
-    
+<!-- Bootstrap y JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<!-- Tu archivo JavaScript personalizado -->
+<script src="scripts.js"></script>
+
+<!-- Script JavaScript para el gráfico de unidades vendidas por semana -->
+<script>
+$(document).ready(function() {
+    // Datos de ejemplo para el gráfico
+    var dataVentasPorSemana = {
+        labels: ["Semana 1", "Semana 2", "Semana 3", "Semana 4"],
+        datasets: [{
+            label: 'Unidades Vendidas por Semana',
+            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+            borderColor: 'rgba(75, 192, 192, 1)',
+            borderWidth: 1,
+            data: [100, 120, 110, 130],
+        }]
+    };
+
+    // Configuración del gráfico
+    var optionsVentasPorSemana = {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    };
+
+    // Obtener el contexto del canvas
+    var ctxVentasPorSemana = document.getElementById('chartVentasPorSemana').getContext('2d');
+
+    // Crear el gráfico de barras
+    var chartVentasPorSemana = new Chart(ctxVentasPorSemana, {
+        type: 'bar',
+        data: dataVentasPorSemana,
+        options: optionsVentasPorSemana
+    });
+
+    // Actualizar datos del gráfico (simulado)
+    $('#actualizarDatos').on('click', function() {
+        // Simulación de datos actualizados
+        var newData = [110, 130, 120, 140];
+
+        // Actualizar datos del gráfico
+        chartVentasPorSemana.data.datasets[0].data = newData;
+        chartVentasPorSemana.update();
+    });
+});
+</script>
+
 </body>
-
 </html>
