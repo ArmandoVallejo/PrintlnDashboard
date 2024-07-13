@@ -307,7 +307,7 @@ main .new-users{
     margin-top: 1.3rem;
 }
 
-main .new-users .user-list{
+main .new-users .user-list, .ranking{
     background-color: var(--color-white);
     padding: var(--card-padding);
     border-radius: var(--card-border-radius);
@@ -321,6 +321,7 @@ main .new-users .user-list{
     transition: all 0.3s ease;
 }
 
+
 main .new-users .user-list:hover{
     box-shadow: none;
 }
@@ -333,10 +334,10 @@ main .new-users .user-list .user{
 }
 
 main .new-users .user-list .user img{
-    width: 5rem;
-    height: 5rem;
+    width: 6rem;
+    height: 7rem;
     margin-bottom: 0.4rem;
-    border-radius: 50%;
+    /*border-radius: 50%;*/
 }
 
 main .recent-orders{
@@ -706,4 +707,12 @@ main .recent-orders a{
         font-size: 2rem;
     }
 
+}
+
+.hidden{
+    display: none!important;
+}
+#filter{
+    padding: 1rem;
+    border-radius: var(--card-border-radius) ;
 }
