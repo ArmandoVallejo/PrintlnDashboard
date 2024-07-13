@@ -6,7 +6,7 @@ var dataMostSearched = google.visualization.arrayToDataTable([
   ['Contry', 'Mhl'],
   ['Cuello V',54.8],
   ['Polo',48.6],
-  ['Deporte',44.4],
+  ['Deporte',44.4]
   
 ]);
 
