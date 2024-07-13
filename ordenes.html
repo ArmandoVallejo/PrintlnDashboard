@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
     <link rel="stylesheet" href="styles/orders.css">
     <title>Dashboard println</title>
@@ -11,13 +12,56 @@
 
 <body>
 
-    <div class="container">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="scripts.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', function () {
+        const orders = [
+            { id: 1, product: 'Camiseta A', quantity: 2, customer: 'Juan Perez', date: '2024-07-01', status: 'Pendiente' },
+            { id: 2, product: 'Camiseta B', quantity: 1, customer: 'Ana Gomez', date: '2024-07-02', status: 'Entregado' },
+            { id: 3, product: 'Camiseta C', quantity: 3, customer: 'Carlos Lopez', date: '2024-07-03', status: 'Pendiente' },
+            { id: 4, product: 'Camiseta D', quantity: 5, customer: 'Maria Martinez', date: '2024-07-04', status: 'Entregado' },
+        ];
+    
+        const orderTable = document.getElementById('orderTable');
+    
+        function renderOrders(orders) {
+            orderTable.innerHTML = '';
+            orders.forEach(order => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${order.id}</td>
+                    <td>${order.product}</td>
+                    <td>${order.quantity}</td>
+                    <td>${order.customer}</td>
+                    <td>${order.date}</td>
+                    <td class="${order.status === 'Pendiente' ? 'status-pending' : 'status-delivered'}">${order.status}</td>
+                `;
+                orderTable.appendChild(row);
+            });
+        }
+    
+        document.getElementById('searchInput').addEventListener('input', function (e) {
+            const searchTerm = e.target.value.toLowerCase();
+            const filteredOrders = orders.filter(order =>
+                order.product.toLowerCase().includes(searchTerm) ||
+                order.customer.toLowerCase().includes(searchTerm) ||
+                order.status.toLowerCase().includes(searchTerm)
+            );
+            renderOrders(filteredOrders);
+        });
+    
+        renderOrders(orders);
+    });
+    </script>
+    <div class="Icontainer">
         <!-- Sidebar Section -->
         <aside>
             <div class="toggle">
                 <div class="logo">
                     <a href="index.html">
-                        <img src="img/logo.jpg.jpeg">
+                        <img src="img/logo.jpeg">
                     </a>
                 </div>
                 <div class="close" id="close-btn">
@@ -28,7 +72,7 @@
             </div>
 
             <div class="sidebar">
-                <a href="index.html" >
+                <a href="index.html" class="active">
                     <span class="material-icons-sharp">
                         dashboard
                     </span>
@@ -64,7 +108,7 @@
                     </span>
                     <h3>Proveedores</h3>
                 </a>
-                <a href="orders.html"class="active">
+                <a href="orders.html">
                     <span class="material-icons-sharp">
                         inventory_2
                     </span>
@@ -88,7 +132,7 @@
                     </span>
                     <h3>Membresías</h3>
                 </a>
-                <a href="settigs.html">
+                <a href="settings.html">
                     <span class="material-icons-sharp">
                         settings
                     </span>
@@ -118,171 +162,37 @@
 
         <!-- Main Content -->
         <main>
-            <h1>Analíticas
-            </h1>
-            <!-- Analyses -->
-            <div class="analyse">
-                <div class="sales">
-                    <div class="status">
-                        <div class="info">
-                            <h3>Ventas totales</h3>
-                            <h1>$65,024</h1>
-                        </div>
-                        <div class="progresss">
-                            <svg>
-                                <circle cx="38" cy="38" r="36"></circle>
-                            </svg>
-                            <div class="percentage">
-                                <p>+81%</p>
-                            </div>
-                        </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="container mt-5">
+                <h1 class="text-center mb-4">Ordenes de Compra</h1>
+                <div class="row mb-4">
+                    <div class="col-md-12">
+                        <input type="text" class="form-control" id="searchInput" placeholder="Buscar orden...">
                     </div>
                 </div>
-                <div class="visits">
-                    <div class="status">
-                        <div class="info">
-                            <h3>Visitas en el sitio</h3>
-                            <h1>24,981</h1>
-                        </div>
-                        <div class="progresss">
-                            <svg>
-                                <circle cx="38" cy="38" r="36"></circle>
-                            </svg>
-                            <div class="percentage">
-                                <p>-48%</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="searches">
-                    <div class="status">
-                        <div class="info">
-                            <h3>Búsquedas</h3>
-                            <h1>14,147</h1>
-                        </div>
-                        <div class="progresss">
-                            <svg>
-                                <circle cx="38" cy="38" r="36"></circle>
-                            </svg>
-                            <div class="percentage">
-                                <p>+21%</p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>ID de Orden</th>
+                                <th>Producto</th>
+                                <th>Cantidad</th>
+                                <th>Cliente</th>
+                                <th>Fecha</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="orderTable">
+                            <!-- Aquí se llenarán los datos dinámicamente -->
+                        </tbody>
+                    </table>
                 </div>
             </div>
-            <!-- End of Analyses -->
-
-            <!-- New Products Section -->
-            <div class="new-users">
-                <h2>Productos nuevos</h2>
-                <div class="user-list">
-                    <div class="user">
-                        <img src="img/NBA.jpg">
-                        <h2>Playera NBA</h2>
-                        <p>50 piezas</p>
-                    </div>
-                    <div class="user">
-                        <img src="img/cuellov.jpg">
-                        <h2>Playera cuello V</h2>
-                        <p>105 piezas</p>
-                    </div>
-                    <div class="user">
-                        <img src="img/Polo.webp">
-                        <h2>Camisa Polo</h2>
-                        <p>44 piezas</p>
-                    </div>
-                    <div class="user">
-                        <a href="products.html">
-                            <img src="img/plus.png">
-                            <h2>Añadir</h2>
-                            <p>Usuario nuevo</p></a>
-                    </div>
-                </div>
-            </div>
-            <!-- End of New Products Section -->
-            <!-- New Users Section -->
-            <div class="new-users">
-                <h2>Usuarios nuevos</h2>
-                <div class="user-list">
-                    <div class="user">
-                        <img src="img/profile-1.jpg">
-                        <h2>Jack</h2>
-                        <p>Hace 54 Min</p>
-                    </div>
-                    <div class="user">
-                        <img src="img/profile-3.jpg">
-                        <h2>Amir</h2>
-                        <p>Hace 3 Horas</p>
-                    </div>
-                    <div class="user">
-                        <img src="img/profile-4.jpg">
-                        <h2>Ember</h2>
-                        <p>Hace 6 horas</p>
-                    </div>
-                    <div class="user">
-                        <a href="users.html">
-                            <img src="img/plus.png">
-                            <h2>Añadir</h2>
-                            <p>Usuario nuevo</p>
-                        </a>
-                        
-                    </div>
-                </div>
-            </div>
-            <!-- End of New Users Section -->
-            <!-- New Users Section -->
-            <div class="new-users">
-                <h2>Proveedores</h2>
-                <div class="user-list">
-                    <div class="user">
-                        <img src="img/images.jpeg">
-                        <h2>tela</h2>
-                        <p>4492332876</p>
-                    </div>
-                    <div class="user">
-                        <img src="img/91y0owIpxMS.jpg">
-                        <h2>Pintura</h2>
-                        <p>4492332876</p>
-                    </div>
-                    <div class="user">
-                        <img src="img/images (1).jpeg">
-                        <h2>diseñador</h2>
-                        <p>4492332876</p>
-                    </div>
-                    <div class="user">
-                        <a href="">
-                            <a href="providers.html">
-                                <img src="img/plus.png">
-                                <h2>Añadir</h2>
-                                <p>Proveedor</p>
-                            </a>
-                            
-                        </a>
-                        
-                    </div>
-                </div>
-            </div>
-            <!-- End of New Users Section -->
-
-            <!-- Recent Orders Table -->
-            <div class="recent-orders">
-                <h2>Ordenes recientes</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Producto</th>
-                            <th>Número de venta</th>
-                            <th>Pago</th>
-                            <th>Status</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody></tbody>
-                </table>
-                <a href="orders.html">Show All</a>
-            </div>
-            <!-- End of Recent Orders -->
+        
 
         </main>
         <!-- End of Main Content -->
@@ -321,7 +231,7 @@
 
             <div class="user-profile">
                 <div class="logo">
-                    <img src="img/logo.jpg.jpeg">
+                    <img src="img/logo.jpeg">
                     <h2>println</h2>
                     <p>Fullstack Web Developer</p>
                 </div>
@@ -388,8 +298,6 @@
 
 
     </div>
-
-    <script src="javascript/orders.js"></script>
     <script src="javascript/index.js"></script>
     
 </body>

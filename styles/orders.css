@@ -55,6 +55,42 @@ body{
     color: var(--color-dark);
     background-color: var(--color-background);
 }
+.table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+
+.table th,
+.table td {
+    padding: 10px;
+    border: 1px solid #dee2e6;
+}
+
+.table th {
+    background-color: #343a40;
+    color: white;
+}
+
+.status-pending {
+    color: #ffc107;
+}
+
+.status-delivered {
+    color: #28a745;
+}
+
+
+.table-hover tbody tr:hover {
+    background-color: #e9ecef;
+}
+
+#searchInput {
+    border: 1px solid #343a40;
+    padding: 10px;
+}
+
+
 
 a{
     color: var(--color-dark);
@@ -113,7 +149,7 @@ b{
     color: var(--color-warning);
 }
 
-.container{
+.Icontainer{
     display: grid;
     width: 96%;
     margin: 0 auto;
@@ -367,9 +403,6 @@ main table tbody td{
     color: var(--color-dark-variant);
 }
 
-main table tbody tr:last-child td{
-    border: none;
-}
 
 main .recent-orders a{
     text-align: center;
@@ -536,7 +569,7 @@ main .recent-orders a{
 }
 
 @media screen and (max-width: 1200px) {
-    .container{
+    .Icontainer{
         width: 95%;
         grid-template-columns: 7rem auto 23rem;
     }
@@ -592,7 +625,7 @@ main .recent-orders a{
 }
 
 @media screen and (max-width: 768px) {
-    .container{
+    .Icontainer{
         width: 100%;
         grid-template-columns: 1fr;
         padding: 0 var(--padding-1);
@@ -653,16 +686,7 @@ main .recent-orders a{
         flex-basis: 35%;
     }
 
-    main .recent-orders{
-        position: relative;
-        margin: 3rem 0 0 0;
-        width: 100%;
-    }
 
-    main .recent-orders table{
-        width: 100%;
-        margin: 0;
-    }
 
     .right-section{
         width: 94%;
