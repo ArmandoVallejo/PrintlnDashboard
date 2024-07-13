@@ -118,22 +118,22 @@
 
         <!-- Main Content -->
         <main>
-            <h1>Analíticas
+            <h1>Membresias
             </h1>
             <!-- Analyses -->
             <div class="analyse">
                 <div class="sales">
                     <div class="status">
                         <div class="info">
-                            <h3>Ventas totales</h3>
-                            <h1>$65,024</h1>
+                            <h3>Ventas totales de membresias</h3>
+                            <h1>$28,000</h1>
                         </div>
                         <div class="progresss">
                             <svg>
                                 <circle cx="38" cy="38" r="36"></circle>
                             </svg>
                             <div class="percentage">
-                                <p>+81%</p>
+                                <p>45%</p>
                             </div>
                         </div>
                     </div>
@@ -141,15 +141,15 @@
                 <div class="visits">
                     <div class="status">
                         <div class="info">
-                            <h3>Visitas en el sitio</h3>
-                            <h1>24,981</h1>
+                            <h3>Membresia mas vendida</h3>
+                            <h1>Deluxe</h1>
                         </div>
                         <div class="progresss">
                             <svg>
                                 <circle cx="38" cy="38" r="36"></circle>
                             </svg>
                             <div class="percentage">
-                                <p>-48%</p>
+                                <p>43.75%</p>
                             </div>
                         </div>
                     </div>
@@ -157,15 +157,15 @@
                 <div class="searches">
                     <div class="status">
                         <div class="info">
-                            <h3>Búsquedas</h3>
-                            <h1>14,147</h1>
+                            <h3>Membresia menos vendida</h3>
+                            <h1>Plus</h1>
                         </div>
                         <div class="progresss">
                             <svg>
                                 <circle cx="38" cy="38" r="36"></circle>
                             </svg>
                             <div class="percentage">
-                                <p>+21%</p>
+                                <p>25%</p>
                             </div>
                         </div>
                     </div>
@@ -175,34 +175,64 @@
 
             <!-- New Products Section -->
             <div class="new-users">
-                <h2>Productos nuevos</h2>
+                <h2>Usuarios por cada membresia</h2>
                 <div class="user-list">
                     <div class="user">
-                        <img src="img/NBA.jpg">
-                        <h2>Playera NBA</h2>
-                        <p>50 piezas</p>
+                        <img src="img/tarjeta-basica.jpg">
+                        <h2>Membresia Básica</h2>
+                        <p>20 Usuarios</p>
                     </div>
                     <div class="user">
-                        <img src="img/cuellov.jpg">
-                        <h2>Playera cuello V</h2>
-                        <p>105 piezas</p>
+                        <img src="img/tarjeta-plus.jpg">
+                        <h2>Membresia Plus</h2>
+                        <p>16 Usuarios</p>
                     </div>
                     <div class="user">
-                        <img src="img/Polo.webp">
-                        <h2>Camisa Polo</h2>
-                        <p>44 piezas</p>
+                        <img src="img/tarjeta-deluxe.jpg">
+                        <h2>Membresia Deluxe</h2>
+                        <p>28 Usuarios</p>
                     </div>
-                    <div class="user">
-                        <a href="products.html">
-                            <img src="img/plus.png">
-                            <h2>Añadir</h2>
-                            <p>Usuario nuevo</p></a>
+                </div>
+            </div>
+            
+            <div class="analyse">
+                <div class="sales">
+                    <div class="status">
+                        <div class="info">
+                            <h1>Taza de renovación</h1>
+                          
+                        </div>
+                        <div class="progresss">
+                            <svg>
+                                <circle cx="38" cy="38" r="36"></circle>
+                            </svg>
+                            <div class="percentage">
+                                <p>38%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="visits">
+                    <div class="status">
+                        <div class="info">
+                         
+                            <h1>Taza de Deserción</h1>
+                        </div>
+                        <div class="progresss">
+                            <svg>
+                                <circle cx="38" cy="38" r="36"></circle>
+                            </svg>
+                            <div class="percentage">
+                                <p>62%</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
             <!-- End of New Products Section -->
             <!-- New Users Section -->
-            <div class="new-users">
+             <!--
+             <div class="new-users">
                 <h2>Usuarios nuevos</h2>
                 <div class="user-list">
                     <div class="user">
@@ -230,9 +260,12 @@
                     </div>
                 </div>
             </div>
+             -->
+           
             <!-- End of New Users Section -->
             <!-- New Users Section -->
-            <div class="new-users">
+            <!--
+             <div class="new-users">
                 <h2>Proveedores</h2>
                 <div class="user-list">
                     <div class="user">
@@ -263,24 +296,76 @@
                     </div>
                 </div>
             </div>
+            --> 
+           
             <!-- End of New Users Section -->
 
             <!-- Recent Orders Table -->
             <div class="recent-orders">
-                <h2>Ordenes recientes</h2>
+                <h2>Usuarios y membresias</h2>
                 <table>
                     <thead>
                         <tr>
-                            <th>Producto</th>
-                            <th>Número de venta</th>
-                            <th>Pago</th>
-                            <th>Status</th>
-                            <th></th>
+                            <th>Id Usuario</th>
+                            <th>Usuario</th>
+                            <th>Membresia</th>
+                            <th>Estado</th>
+                            <th>Inicio Membresia</th>
+                            <th>Vencimiento</th>
                         </tr>
                     </thead>
-                    <tbody></tbody>
+                    <tbody>
+                        <tr>
+                            <td>095867</td>
+                            <td style="text-align: center; vertical-align: middle;">
+                                <div style="display: flex; flex-direction: column; align-items: center;justify-content: center;height: 100%;">
+                                    <img src="img/profile-2.jpg" style="width: 60px;"><p>Antonio Montana</p>
+                                </div>
+                            </td> 
+                            <td>Plus</td>
+                            <td>Activo</td>
+                            <td>27/03/2023</td>
+                            <td>27/07/2024</td>
+                        </tr>
+                        <tr>
+                            <td>210394</td>
+                            <td style="text-align: center; vertical-align: middle;">
+                                <div style="display: flex; flex-direction: column; align-items: center;justify-content: center;height: 100%;">
+                                    <img src="img/profile-3.jpg" style="width: 60px;"><p>Renatta Montoya</p>
+                                </div>
+                            </td> 
+                            <td>Plus</td>
+                            <td>Activo</td>
+                            <td>14/06/2024</td>
+                            <td>14/07/2024</td>
+                        </tr>
+                        <tr>
+                            <td>330333</td>
+                            <td style="text-align: center; vertical-align: middle;">
+                                <div style="display: flex; flex-direction: column; align-items: center;justify-content: center;height: 100%;">
+                                    <img src="img/profile-4.jpg" style="width: 60px;"><p>Paola Sánchez</p>
+                                </div>
+                            </td> 
+                            <td>Deluxe</td>
+                            <td>Inactivo</td>
+                            <td>20/09/2023</td>
+                            <td>21/12/2023</td>
+                        </tr>
+                        <tr>
+                            <td>232024</td>
+                            <td style="text-align: center; vertical-align: middle;">
+                                <div style="display: flex; flex-direction: column; align-items: center;justify-content: center;height: 100%;">
+                                    <img src="img/profile-2.jpg" style="width: 60px;"><p>Jose Pineda</p>
+                                </div>
+                            </td> 
+                            <td>Basica</td>
+                            <td>Activo</td>
+                            <td>02/04/2024</td>
+                            <td>02/08/2024</td>
+                        </tr>
+                    </tbody>
                 </table>
-                <a href="orders.html">Show All</a>
+                <a href="">Show All</a>
             </div>
             <!-- End of Recent Orders -->
 
@@ -389,8 +474,7 @@
 
     </div>
 
-    <script src="javascript/orders.js"></script>
-    <script src="javascript/index.js"></script>
+    <script src="javascript/membership.js"></script>
     
 </body>
 
