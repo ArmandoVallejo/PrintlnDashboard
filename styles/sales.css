@@ -57,19 +57,19 @@ body{
 }
 
 .jumbotron-custom-tshirts {
-    background-size: cover;
-    color: #000000;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
-            padding: 4rem 2rem;
-            margin-bottom: 2rem;
-        }
-        .jumbotron-custom-tshirts h1, .jumbotron-custom-tshirts p {
-            text-align: center;
-        }
-        .jumbotron-custom-tshirts .lead {
-            font-size: 1.5rem;
-            text-align: center;
-        }
+        background-size: cover;
+        color: #000000;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+                padding: 4rem 2rem;
+                margin-bottom: 2rem;
+            }
+            .jumbotron-custom-tshirts h1, .jumbotron-custom-tshirts p {
+                text-align: center;
+            }
+            .jumbotron-custom-tshirts .lead {
+                font-size: 1.5rem;
+                text-align: center;
+            }
         .custom-section {
             margin-top: 2rem;
             margin-bottom: 2rem;
@@ -85,6 +85,7 @@ body{
         }
         .chart-container-custom {
             height: 400px; /* Altura específica para el contenedor del gráfico */
+            width: 600px;
         }
 
 a{
@@ -144,8 +145,11 @@ b{
     color: var(--color-warning);
 }
 
+
+
 aside{
     height: 100vh;
+    margin: 0%;
 }
 
 aside .toggle{
@@ -170,7 +174,7 @@ aside .toggle .close{
     display: none;
 }
 
-aside .sidebar{
+/* aside .sidebar{
     display: flex;
     flex-direction: column;
     background-color: var(--color-white);
@@ -180,7 +184,7 @@ aside .sidebar{
     position: relative;
     top: 1.5rem;
     transition: all 0.3s ease;
-}
+} */
 
 aside .sidebar:hover{
     box-shadow: none;
@@ -559,10 +563,10 @@ main .recent-orders a{
 }
 
 @media screen and (max-width: 1200px) {
-    .container{
-        width: 95%;
+    /*.container{
+        /* width: 0%; 
         grid-template-columns: 7rem auto 23rem;
-    }
+    } */
 
     aside .logo h2{
         display: none;
@@ -619,7 +623,7 @@ main .recent-orders a{
         width: 100%;
         grid-template-columns: 1fr;
         padding: 0 var(--padding-1);
-    }
+    } 
 
     aside{
         position: fixed;
