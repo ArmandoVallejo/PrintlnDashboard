@@ -581,15 +581,49 @@ main .recent-orders a{
     }
     
     
-    table {
-        width: 60%;
-        min-width: 768px; /* Ajusta según el tamaño mínimo necesario para tu tabla */
-        overflow-x: auto;
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr {
+        border: 1px solid #ddd;
+        margin-bottom: 10px;
+    }
+
+    td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+        text-align: right;
+    }
+
+    td:before {
+        position: absolute;
+        top: 12px;
+        left: 10px;
+        width: calc(50% - 20px);
+        white-space: nowrap;
+        content: attr(data-label);
+        text-align: left;
+        font-weight: bold;
+        color: #666;
+    }
+
+    td img {
+        display: block;
+        margin: 0 auto;
     }
     .button-container {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        
     }
 
     button {
@@ -695,6 +729,11 @@ main .recent-orders a{
 
 }
 
+.button-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 button {
     background-color: #44475a; /* Verde por defecto */
     color: white;
@@ -706,11 +745,11 @@ button {
     margin: 5px;
 }
 
-#delete-user-btn {
-    background-color: #ff5555; /* Rojo */
+#delete-product-btn {
+    background-color: #f44336; /* Rojo */
 }
 
-#delete-user-btn:hover {
+#delete-product-btn:hover {
     background-color: #d32f2f;
 }
 
@@ -777,7 +816,8 @@ input[type="email"],
 input[type="date"],
 input[type="datetime-local"],
 input[type="password"],
-input[type="text"] {
+input[type="text"],
+input[type="number"] {
     margin-bottom: 20px;
 }
 
@@ -792,4 +832,42 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
     background-color: #45a049;
+}
+
+.employees-table {
+    margin: 20px 0;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2%;
+    margin-bottom: 20px;
+    border: 2px solid #d1d1d1;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: center;
+    border-bottom: 1px solid #c2c2c2;
+}
+
+th {
+    background-color: #fffcfc;
+    color: #000000;
+    font-weight: 600;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+td img {
+    max-width: 50px;
+    max-height: 50px;
+    border-radius: 50%;
 }
