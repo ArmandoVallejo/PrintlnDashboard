@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+                <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
     <link rel="stylesheet" href="styles/providers.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
     <title>Dashboard println</title>
 </head>
 
@@ -17,7 +20,7 @@
             <div class="toggle">
                 <div class="logo">
                     <a href="index.html">
-                        <img src="img/logo.jpg.jpeg">
+                        <img src="img/logo.jpeg">
                     </a>
                 </div>
                 <div class="close" id="close-btn">
@@ -118,22 +121,94 @@
 
         <!-- Main Content -->
         <main>
-            <h1>Analíticas
-            </h1>
+            <h1>Proveedores</h1>
+            <h2>Principales proveedores</h2>
             <!-- Analyses -->
+
+            <div class="new-users">
+                <h2>Playeras</h2>
+                <div class="user-list">
+                    <div class="user">
+                        <img src="img/optima.jpg">
+                        <h2>Optima</h2>
+                    </div>
+                    <div class="user">
+                        <img src="img/yazbek.png">
+                        <h2>Yazbek</h2>
+                       
+                    </div>
+                    <div class="user">
+                        <img src="img/gildan.png">
+                        <h2>Gildan</h2>
+                    </div>
+                    <div class="user">
+                        <a href="#formulario">
+                            <img src="img/plus.png">
+                            <h2>Añadir</h2>
+                            <p>Proveedor</p></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="new-users">
+                <h2>Pintura</h2>
+                <div class="user-list">
+                    <div class="user">
+                        <img src="img/nazdar.png">
+                        <h2>Nazdar</h2>
+                    </div>
+                    <div class="user">
+                        <img src="img/rutland.png">
+                        <h2>Rutland</h2>
+                       
+                    </div>
+                    <div class="user">
+                        <a href="#formulario">
+                            <img src="img/plus.png">
+                            <h2>Añadir</h2>
+                            <p>Proveedor</p></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="new-users">
+                <h2>Herramientas e indumentaria</h2>
+                <div class="user-list">
+                    <div class="user">
+                        <img src="img/ryonet.jpg">
+                        <h2>Ryonet</h2>
+                    </div>
+                    <div class="user">
+                        <img src="img/mclogan.png">
+                        <h2>McLogan Supply</h2>
+                       
+                    </div>
+                    <div class="user">
+                        <img src="img/catspit.webp">
+                        <h2>Catspit Supplies</h2>
+                    </div>
+                    <div class="user">
+                        <a href="#formulario">
+                            <img src="img/plus.png">
+                            <h2>Añadir</h2>
+                            <p>Proveedor</p></a>
+                    </div>
+                </div>
+            </div>
+
             <div class="analyse">
                 <div class="sales">
                     <div class="status">
                         <div class="info">
-                            <h3>Ventas totales</h3>
-                            <h1>$65,024</h1>
+                            <h3>Compras totales playeras/mes</h3>
+                            <h1>$4000</h1>
                         </div>
                         <div class="progresss">
                             <svg>
                                 <circle cx="38" cy="38" r="36"></circle>
                             </svg>
                             <div class="percentage">
-                                <p>+81%</p>
+                                <p>60%</p>
                             </div>
                         </div>
                     </div>
@@ -141,15 +216,15 @@
                 <div class="visits">
                     <div class="status">
                         <div class="info">
-                            <h3>Visitas en el sitio</h3>
-                            <h1>24,981</h1>
+                            <h3>Compras totales insumos/mes</h3>
+                            <h1>$1700</h1>
                         </div>
                         <div class="progresss">
                             <svg>
                                 <circle cx="38" cy="38" r="36"></circle>
                             </svg>
                             <div class="percentage">
-                                <p>-48%</p>
+                                <p>25%</p>
                             </div>
                         </div>
                     </div>
@@ -157,130 +232,300 @@
                 <div class="searches">
                     <div class="status">
                         <div class="info">
-                            <h3>Búsquedas</h3>
-                            <h1>14,147</h1>
+                            <h3>Compras totales herramientas/mes</h3>
+                            <h1>$1000</h1>
                         </div>
                         <div class="progresss">
                             <svg>
                                 <circle cx="38" cy="38" r="36"></circle>
                             </svg>
                             <div class="percentage">
-                                <p>+21%</p>
+                                <p>15%</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- End of Analyses -->
+            <div>
+                <h2>Cantidad insumos</h2>
+                <canvas id="myChart"></canvas>
+            </div>
+            <script>
+                const ctx = document.getElementById('myChart').getContext('2d');
+                const myChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Yazbek', 'Optima', 'Gildan'],
+                        datasets: [{
+                            label: 'Cantidad de Playeras/Junio',
+                            data: [35, 19, 20], // Reemplaza estos valores con tus datos
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 0.2)',
+                                'rgba(54, 162, 235, 0.2)',
+                                'rgba(255, 206, 86, 0.2)'
+                            ],
+                            borderColor: [
+                                'rgba(255, 99, 132, 1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(255, 206, 86, 1)'
+                            ],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+            </script>
 
-            <!-- New Products Section -->
-            <div class="new-users">
-                <h2>Productos nuevos</h2>
-                <div class="user-list">
-                    <div class="user">
-                        <img src="img/NBA.jpg">
-                        <h2>Playera NBA</h2>
-                        <p>50 piezas</p>
-                    </div>
-                    <div class="user">
-                        <img src="img/cuellov.jpg">
-                        <h2>Playera cuello V</h2>
-                        <p>105 piezas</p>
-                    </div>
-                    <div class="user">
-                        <img src="img/Polo.webp">
-                        <h2>Camisa Polo</h2>
-                        <p>44 piezas</p>
-                    </div>
-                    <div class="user">
-                        <a href="products.html">
-                            <img src="img/plus.png">
-                            <h2>Añadir</h2>
-                            <p>Usuario nuevo</p></a>
-                    </div>
-                </div>
-            </div>
-            <!-- End of New Products Section -->
-            <!-- New Users Section -->
-            <div class="new-users">
-                <h2>Usuarios nuevos</h2>
-                <div class="user-list">
-                    <div class="user">
-                        <img src="img/profile-1.jpg">
-                        <h2>Jack</h2>
-                        <p>Hace 54 Min</p>
-                    </div>
-                    <div class="user">
-                        <img src="img/profile-3.jpg">
-                        <h2>Amir</h2>
-                        <p>Hace 3 Horas</p>
-                    </div>
-                    <div class="user">
-                        <img src="img/profile-4.jpg">
-                        <h2>Ember</h2>
-                        <p>Hace 6 horas</p>
-                    </div>
-                    <div class="user">
-                        <a href="users.html">
-                            <img src="img/plus.png">
-                            <h2>Añadir</h2>
-                            <p>Usuario nuevo</p>
-                        </a>
-                        
-                    </div>
-                </div>
-            </div>
-            <!-- End of New Users Section -->
-            <!-- New Users Section -->
-            <div class="new-users">
-                <h2>Proveedores</h2>
-                <div class="user-list">
-                    <div class="user">
-                        <img src="img/images.jpeg">
-                        <h2>tela</h2>
-                        <p>4492332876</p>
-                    </div>
-                    <div class="user">
-                        <img src="img/91y0owIpxMS.jpg">
-                        <h2>Pintura</h2>
-                        <p>4492332876</p>
-                    </div>
-                    <div class="user">
-                        <img src="img/images (1).jpeg">
-                        <h2>diseñador</h2>
-                        <p>4492332876</p>
-                    </div>
-                    <div class="user">
-                        <a href="">
-                            <a href="providers.html">
-                                <img src="img/plus.png">
-                                <h2>Añadir</h2>
-                                <p>Proveedor</p>
-                            </a>
-                            
-                        </a>
-                        
-                    </div>
-                </div>
-            </div>
-            <!-- End of New Users Section -->
-
+<div>
+    <canvas id="myChart2"></canvas>
+</div>
+<script>
+    const ctx2 = document.getElementById('myChart2').getContext('2d');
+    const myChart2 = new Chart(ctx2, {
+        type: 'bar',
+        data: {
+            labels: ['Pinturas Nazdar', 'Pinturas Rutland', 'Emulsion Ryonet'],
+            datasets: [{
+                label: 'Insumos x litro/Junio',
+                data: [2, 4, 3], // Reemplaza estos valores con tus datos
+                backgroundColor: [
+                    'rgba(44, 0, 200, 0.2)',
+                    'rgba(255, 16, 333, 0.2)',
+                    'rgba(200, 206, 86, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(44, 0, 200, 1)',
+                    'rgba(255, 16, 334, 1)',
+                    'rgba(200, 206, 86, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+</script>
+        
             <!-- Recent Orders Table -->
             <div class="recent-orders">
-                <h2>Ordenes recientes</h2>
+                    <h2>Proveedores</h2>
+                    <button id="add-user-btn">Agregar nuevo proveedor</button>
+                
                 <table>
                     <thead>
                         <tr>
-                            <th>Producto</th>
-                            <th>Número de venta</th>
-                            <th>Pago</th>
-                            <th>Status</th>
-                            <th></th>
+                            <th>Proveedor</th>
+                            <th>Contacto</th>
+                            <th>Productos Ofrecidos</th>
+                            <th>Ubicación</th>
+                            <th>Entrega promedio</th>
+                            <th>Calidad/Precio</th>
+                            <th>Precio mayorista promedio</th>
+                            <th>Descuentos</th>
+                            <th>Acciones</th>
                         </tr>
                     </thead>
-                    <tbody></tbody>
+                    <tbody>
+                        <tr>
+                            <td>Ryonet</td>
+                            <td><a href="mailto:sales@ryonet.com">sales@ryonet.com</a></td>
+                            <td>Equipos, herramientas, tintas, pantallas</td>
+                            <td>Av. Aguascalientes Norte 1234, Col. El Dorado, Aguascalientes</td>
+                            <td>7 días</td>
+                            <td>Alta</td>
+                            <td>$120</td>
+                            <td>5% en pedidos > $500</td>
+                            <td><a id="modify-user-btn"><img src="img/editarprv.png" alt="" style="width: 20px;"></a><a href=""><img src="img/marca-x.png" style="width: 20px;"></a></td>
+                        </tr>
+                        <tr>
+                            <td>Nazdar</td>
+                            <td><a href="mailto:info@nazdar.com">info@nazdar.com</a></td>
+                            <td>Tintas (agua, solvente, UV)</td>
+                            <td>Blvd. Juan Pablo II 567, Col. San Marcos, Aguascalientes</td>
+                            <td>6 días</td>
+                            <td>Alta</td>
+                            <td>$90</td>
+                            <td>7% en pedidos > $1000</td>
+                            <td><a id="modify-user-btn"><img src="img/editarprv.png" alt="" style="width: 20px;"></a><a href=""><img src="img/marca-x.png" style="width: 20px;"></a></td>
+                        </tr>
+                        <tr>
+                            <td>Permaset</td>
+                            <td><a href="mailto:info@permaset.com.au">info@permaset.com.au</a></td>
+                            <td>Tintas ecológicas base agua</td>
+                            <td>Calz. Independencia 789, Col. Las Américas, Aguascalientes</td>
+                            <td>10 días</td>
+                            <td>Muy alta</td>
+                            <td>$110</td>
+                            <td>10% en pedidos > $800</td>
+                            <td><a id="modify-user-btn"><img src="img/editarprv.png" alt="" style="width: 20px;"></a><a href=""><img src="img/marca-x.png" style="width: 20px;"></a></td>
+                        </tr>
+                        <tr>
+                            <td>Anthem Screen Printing</td>
+                            <td><a href="mailto:support@anthemprint.com">support@anthemprint.com</a></td>
+                            <td>Pantallas, raseros, emulsiones</td>
+                            <td>Av. Convención de 1914 123, Col. Jardines de Aguascalientes, Aguascalientes</td>
+                            <td>5 días</td>
+                            <td>Alta</td>
+                            <td>$95</td>
+                            <td>5% en pedidos > $300</td>
+                            <td><a id="modify-user-btn"><img src="img/editarprv.png" alt="" style="width: 20px;"></a><a href=""><img src="img/marca-x.png" style="width: 20px;"></a></td>
+                        </tr>
+                        <tr>
+                            <td>Lawson Screen & Digital Products</td>
+                            <td><a href="mailto:info@lawsonsp.com">info@lawsonsp.com</a></td>
+                            <td>Equipos de serigrafía, herramientas</td>
+                            <td>Av. Las Américas 456, Col. El Llano, Aguascalientes</td>
+                            <td>7 días</td>
+                            <td>Alta</td>
+                            <td>$130</td>
+                            <td>8% en pedidos > $600</td>
+                            <td><a id="modify-user-btn"><img src="img/editarprv.png" alt="" style="width: 20px;"></a><a href=""><img src="img/marca-x.png" style="width: 20px;"></a></td>
+                        </tr>
+                        <tr>
+                            <td>Dick Blick Art Materials</td>
+                            <td><a href="mailto:info@dickblick.com">info@dickblick.com</a></td>
+                            <td>Pantallas, raseros, tintas</td>
+                            <td>Av. Siglo XXI 789, Col. Villa Montaña, Aguascalientes</td>
+                            <td>6 días</td>
+                            <td>Alta</td>
+                            <td>$85</td>
+                            <td>5% en pedidos > $400</td>
+                            <td><a id="modify-user-btn"><img src="img/editarprv.png" alt="" style="width: 20px;"></a><a href=""><img src="img/marca-x.png" style="width: 20px;"></a></td>
+                        </tr>
+                        <tr>
+                            <td>McLogan Supply</td>
+                            <td><a href="mailto:sales@mclogan.com">sales@mclogan.com</a></td>
+                            <td>Máquinas, pantallas, tintas</td>
+                            <td>Blvd. Luis Donaldo Colosio 1234, Col. San Cayetano, Aguascalientes</td>
+                            <td>5 días</td>
+                            <td>Alta</td>
+                            <td>$100</td>
+                            <td>7% en pedidos > $500</td>
+                            <td><a id="modify-user-btn"><img src="img/editarprv.png" alt="" style="width: 20px;"></a><a href=""><img src="img/marca-x.png" style="width: 20px;"></a></td>
+                        </tr>
+                        <tr>
+                            <td>Catspit Productions</td>
+                            <td><a href="mailto:info@catspitproductions.com">info@catspitproductions.com</a></td>
+                            <td>Kits de iniciación, prensas, pantallas</td>
+                            <td>Av. Tecnológico 567, Col. Altavista, Aguascalientes</td>
+                            <td>6 días</td>
+                            <td>Alta</td>
+                            <td>$105</td>
+                            <td>6% en pedidos > $450</td>
+                            <td><a id="modify-user-btn"><img src="img/editarprv.png" alt="" style="width: 20px;"></a><a href=""><img src="img/marca-x.png" style="width: 20px;"></a></td>
+                        <tr>
+                            <td>Total Ink Solutions</td>
+                            <td><a href="mailto:sales@totalinksolutions.com">sales@totalinksolutions.com</a></td>
+                            <td>Tintas, emulsiones, pantallas</td>
+                            <td>Av. Adolfo López Mateos 345, Col. Las Flores, Aguascalientes</td>
+                            <td>7 días</td>
+                            <td>Alta</td>
+                            <td>$115</td>
+                            <td>5% en pedidos > $550</td>
+                            <td><a id="modify-user-btn"><img src="img/editarprv.png" alt="" style="width: 20px;"></a><a href=""><img src="img/marca-x.png" style="width: 20px;"></a></td>
+                        <tr>
+                            <td>Victory Factory</td>
+                            <td><a href="mailto:info@victoryfactory.com">info@victoryfactory.com</a></td>
+                            <td>Pantallas, raseros, tintas</td>
+                            <td>Calle Madero 678, Col. Centro, Aguascalientes</td>
+                            <td>6 días</td>
+                            <td>Alta</td>
+                            <td>$90</td>
+                            <td>7% en pedidos > $600</td>
+                            <td><a id="modify-user-btn"><img src="img/editarprv.png" alt="" style="width: 20px;"></a><a href=""><img src="img/marca-x.png" style="width: 20px;"></a></td>
+                        </tr>
+                        
+                    </tbody>
                 </table>
-                <a href="orders.html">Show All</a>
+            </div>
+            <div id="modify-user-form" class="modal">
+                <div class="modal-content">
+                    <span class="close-btn">&times;</span>
+                    <form>
+                        <label for="modify-name">Proveedor:</label>
+                        <input type="text" id="modify-name" name="name" placeholder="Nombre del proveedor">
+            
+                        <label for="modify-lastname">Contacto:</label>
+                        <input type="text" id="modify-lastname" name="lastname" placeholder="Nombre del contacto">
+            
+                        <label for="modify-lastname2">Productos Ofrecidos:</label>
+                        <input type="text" id="modify-lastname2" name="lastname2" placeholder="Lista de productos ofrecidos">
+            
+                        <label for="modify-mail">Ubicación:</label>
+                        <input type="text" id="modify-mail" name="mail" placeholder="Ubicación del proveedor">
+            
+                        <label for="modify-gender">Género:</label>
+                        <input type="text" id="modify-gender" name="gender" placeholder="Género del proveedor">
+            
+                        <label for="modify-birthDate">Entrega promedio:</label>
+                        <input type="text" id="modify-birthDate" name="birthDate" placeholder="Tiempo de entrega promedio">
+            
+                        <label for="modify-phone">Calidad / Precio:</label>
+                        <input type="text" id="modify-phone" name="phone" placeholder="Calidad / Precio">
+            
+                        <label for="modify-job">Precio promedio (mayorista):</label>
+                        <input type="text" id="modify-job" name="job" placeholder="Precio promedio mayorista">
+            
+                        <label for="modify-photo">Descuentos:</label>
+                        <input type="text" id="modify-photo" name="photo" placeholder="Descuentos disponibles">
+            
+                        <label for="modify-photo">Imagen de la empresa:</label>
+                        <input type="file" id="modify-photo" name="photo" accept="image/*">
+            
+                        <button type="submit">Modificar</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div id="add-user-form" class="modal">
+                <div class="modal-content">
+                    <span class="close-btn">&times;</span>
+                    <form>
+                        <label for="add-name">Proveedor:</label>
+                        <input type="text" id="add-name" name="name" placeholder="Nombre del proveedor">
+            
+                        <label for="add-contact">Contacto:</label>
+                        <input type="text" id="add-contact" name="contact" placeholder="Nombre del contacto">
+            
+                        <label for="add-products">Productos Ofrecidos:</label>
+                        <input type="text" id="add-products" name="products" placeholder="Lista de productos ofrecidos">
+            
+                        <label for="add-location">Ubicación:</label>
+                        <input type="text" id="add-location" name="location" placeholder="Ubicación del proveedor">
+            
+                        <label for="add-gender">Género:</label>
+                        <input type="text" id="add-gender" name="gender" placeholder="Género del proveedor">
+            
+                        <label for="add-delivery">Entrega promedio:</label>
+                        <input type="text" id="add-delivery" name="delivery" placeholder="Tiempo de entrega promedio">
+            
+                        <label for="add-quality-price">Calidad / Precio:</label>
+                        <input type="text" id="add-quality-price" name="quality_price" placeholder="Calidad / Precio">
+            
+                        <label for="add-wholesale-price">Precio promedio (mayorista):</label>
+                        <input type="text" id="add-wholesale-price" name="wholesale_price" placeholder="Precio promedio mayorista">
+            
+                        <label for="add-discounts">Descuentos:</label>
+                        <input type="text" id="add-discounts" name="discounts" placeholder="Descuentos disponibles">
+            
+                        <label for="add-photo">Imagen de la empresa:</label>
+                        <input type="file" id="add-photo" name="photo" accept="image/*">
+            
+                        <button type="submit">Añadir</button>
+                    </form>
+                </div>
             </div>
             <!-- End of Recent Orders -->
 
@@ -321,7 +566,7 @@
 
             <div class="user-profile">
                 <div class="logo">
-                    <img src="img/logo.jpg.jpeg">
+                    <img src="img/logo.jpeg">
                     <h2>println</h2>
                     <p>Fullstack Web Developer</p>
                 </div>
@@ -388,8 +633,7 @@
 
 
     </div>
-
-    <script src="javascript/orders.js"></script>
+    <script src="javascript/providers.js"></script>
     <script src="javascript/index.js"></script>
     
 </body>
