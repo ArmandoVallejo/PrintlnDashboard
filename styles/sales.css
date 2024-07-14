@@ -145,7 +145,13 @@ b{
     color: var(--color-warning);
 }
 
-
+.Icontainer{
+    display: grid;
+    width: 96%;
+    margin: 0 auto;
+    gap: 1.8rem;
+    grid-template-columns: 12rem auto 23rem;
+}
 
 aside{
     height: 100vh;
@@ -563,10 +569,10 @@ main .recent-orders a{
 }
 
 @media screen and (max-width: 1200px) {
-    /*.container{
-        /* width: 0%; 
+    .Icontainer{
+         width: 0%; 
         grid-template-columns: 7rem auto 23rem;
-    } */
+    } 
 
     aside .logo h2{
         display: none;
@@ -619,7 +625,7 @@ main .recent-orders a{
 }
 
 @media screen and (max-width: 768px) {
-    .container{
+    .Icontainer{
         width: 100%;
         grid-template-columns: 1fr;
         padding: 0 var(--padding-1);
