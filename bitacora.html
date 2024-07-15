@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="styles/membership.css">
+    <title>Dashboard println</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Sidebar Section -->
+        <aside>
+            <div class="toggle">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="img/logo.jpeg">
+                    </a>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">
+                        close
+                    </span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="index.html" >
+                    <span class="material-icons-sharp">
+                        dashboard
+                    </span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="users.html">
+                    <span class="material-icons-sharp">
+                        person_outline
+                    </span>
+                    <h3>Clientes</h3>
+                </a>
+                <a href="sales.html">
+                    <span class="material-icons-sharp">
+                        paid
+                    </span>
+                    <h3>Ventas</h3>
+                </a>
+                <a href="analytics.html" >
+                    <span class="material-icons-sharp">
+                        insights
+                    </span>
+                    <h3>Analíticas</h3>
+                </a>
+                <a href="products.html">
+                    <span class="material-icons-sharp">
+                        inventory
+                    </span>
+                    <h3>Productos</h3>
+                </a>
+                <a href="providers.html">
+                    <span class="material-icons-sharp">
+                        handshake
+                    </span>
+                    <h3>Proveedores</h3>
+                </a>
+                <a href="orders.html">
+                    <span class="material-icons-sharp">
+                        inventory_2
+                    </span>
+                    <h3>Ordenes</h3>
+                </a>
+                <a href="custom.html">
+                    <span class="material-icons-sharp">
+                        brush
+                    </span>
+                    <h3>Custom</h3>
+                </a>
+                <a href="reports.html">
+                    <span class="material-icons-sharp">
+                        report_gmailerrorred
+                    </span>
+                    <h3>Reportes</h3>
+                </a>
+                <a href="membership.html"class="active">
+                    <span class="material-icons-sharp">
+                        loyalty
+                    </span>
+                    <h3>Membresías</h3>
+                </a>
+                <a href="settigs.html">
+                    <span class="material-icons-sharp">
+                        settings
+                    </span>
+                    <h3>Config.</h3>
+                </a>
+                <a href="reviews.html">
+                    <span class="material-icons-sharp">
+                        rate_review
+                    </span>
+                    <h3>Reseñas</h3>
+                </a>
+                <a href="login.html">
+                    <span class="material-icons-sharp">
+                        add
+                    </span>
+                    <h3>Nuevo Login</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        logout
+                    </span>
+                    <h3>Salir</h3>
+                </a>
+            </div>
+        </aside>
+        <!-- End of Sidebar Section -->
+
+        <!-- Main Content -->
+        <main>
+            <h1>Bitacora de movimientos
+            </h1>
+           
+            <div class="recent-orders">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Id Usuario</th>
+                            <th>Usuario</th>
+                            <th>Accion</th>
+                            <th>Fecha</th>
+                            <th>Hora</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    
+                        <tr>
+                            <td>095867</td>
+                            <td style="text-align: center; vertical-align: middle;">
+                                <div style="display: flex; flex-direction: column; align-items: center;justify-content: center;height: 100%;">
+                                    <img src="img/profile-2.jpg" style="width: 60px;"><p>Antonio Montana</p>
+                                </div>
+                            </td> 
+                            <td>Agregó producto Camiseta NBA a carrito</td>
+                            <td>27/03/2024</td>
+                            <td>13:44h</td>
+                        </tr>
+                        <tr>
+                            <td>095872</td>
+                            <td style="text-align: center; vertical-align: middle;">
+                                <div style="display: flex; flex-direction: column; align-items: center;justify-content: center;height: 100%;">
+                                    <img src="img/profile-3.jpg" style="width: 60px;"><p>María López</p>
+                                </div>
+                            </td> 
+                            <td>Compro camiseta Ansiedad Intensamente</td>
+                            <td>28/03/2024</td>
+                            <td>10:15h</td>
+                        </tr>
+                        <tr>
+                            <td>095881</td>
+                            <td style="text-align: center; vertical-align: middle;">
+                                <div style="display: flex; flex-direction: column; align-items: center;justify-content: center;height: 100%;">
+                                    <img src="img/perfil-x.jpg" style="width: 60px;"><p>Juan Pérez</p>
+                                </div>
+                            </td> 
+                            <td>Cambió su foto de perfil</td>
+                            <td>29/03/2024</td>
+                            <td>16:30h</td>
+                        </tr>
+                        <tr>
+                            <td>095893</td>
+                            <td style="text-align: center; vertical-align: middle;">
+                                <div style="display: flex; flex-direction: column; align-items: center;justify-content: center;height: 100%;">
+                                    <img src="img/profile-4.jpg" style="width: 60px;"><p>Carla Rodríguez</p>
+                                </div>
+                            </td> 
+                            <td>Pagó el pedido número 12323</td>
+                            <td>30/03/2024</td>
+                            <td>14:22h</td>
+                        </tr>
+                        <tr>
+                            <td>095899</td>
+                            <td style="text-align: center; vertical-align: middle;">
+                                <div style="display: flex; flex-direction: column; align-items: center;justify-content: center;height: 100%;">
+                                    <img src="img/profile-2.jpg" style="width: 60px;"><p>Luis Gómez</p>
+                                </div>
+                            </td> 
+                            <td>Agregó producto Playera Olimpica a carrito</td>
+                            <td>01/04/2024</td>
+                            <td>09:55h</td>
+                        </tr>
+                        <tr>
+                            <td>095904</td>
+                            <td style="text-align: center; vertical-align: middle;">
+                                <div style="display: flex; flex-direction: column; align-items: center;justify-content: center;height: 100%;">
+                                    <img src="img/profile-3.jpg" style="width: 60px;"><p>Sofía Martínez</p>
+                                </div>
+                            </td> 
+                            <td>Agrego playera Diseño Costero a su lista de deseos</td>
+                            <td>02/04/2024</td>
+                            <td>15:10h</td>
+                        </tr>
+                        <tr>
+                            <td>095910</td>
+                            <td style="text-align: center; vertical-align: middle;">
+                                <div style="display: flex; flex-direction: column; align-items: center;justify-content: center;height: 100%;">
+                                    <img src="img/perfil-x.jpg" style="width: 60px;"><p>Martín Sánchez</p>
+                                </div>
+                            </td> 
+                            <td>Cambió su dirección de envío</td>
+                            <td>03/04/2024</td>
+                            <td>11:45h</td>
+                        </tr>
+                        <tr>
+                            <td>095917</td>
+                            <td style="text-align: center; vertical-align: middle;">
+                                <div style="display: flex; flex-direction: column; align-items: center;justify-content: center;height: 100%;">
+                                    <img src="img/profile-3.jpg" style="width: 60px;"><p>Ana Ramírez</p>
+                                </div>
+                            </td> 
+                            <td>Cambio su correo electronico</td>
+                            <td>04/04/2024</td>
+                            <td>16:30h</td>
+                        </tr>
+                        <tr>
+                            <td>095923</td>
+                            <td style="text-align: center; vertical-align: middle;">
+                                <div style="display: flex; flex-direction: column; align-items: center;justify-content: center;height: 100%;">
+                                    <img src="img/profile-2.jpg" style="width: 60px;"><p>Javier Castro</p>
+                                </div>
+                            </td> 
+                            <td>Agregó producto Camisa de Cuadros a carrito</td>
+                            <td>05/04/2024</td>
+                            <td>10:20h</td>
+                        </tr>
+                        <tr>
+                            <td>095930</td>
+                            <td style="text-align: center; vertical-align: middle;">
+                                <div style="display: flex; flex-direction: column; align-items: center;justify-content: center;height: 100%;">
+                                    <img src="img/profile-4.jpg" style="width: 60px;"><p>Elena Díaz</p>
+                                </div>
+                            </td> 
+                            <td>Compró el producto Playera Negra Minimalismo</td>
+                            <td>06/04/2024</td>
+                            <td>14:05h</td>
+                        </tr>
+                        <tr>
+                            <td>095938</td>
+                            <td style="text-align: center; vertical-align: middle;">
+                                <div style="display: flex; flex-direction: column; align-items: center;justify-content: center;height: 100%;">
+                                    <img src="img/perfil-x.jpg" style="width: 60px;"><p>Miguel González</p>
+                                </div>
+                            </td> 
+                            <td>Cambió su foto de perfil</td>
+                            <td>07/04/2024</td>
+                            <td>09:30h</td>
+                        </tr>
+                       
+                    </tbody>
+                </table>
+             
+            </div>
+            <!-- End of Recent Orders -->
+
+        </main>
+        <!-- End of Main Content -->
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <div class="nav">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">
+                        menu
+                    </span>
+                </button>
+                <div class="dark-mode">
+                    <span class="material-icons-sharp active">
+                        light_mode
+                    </span>
+                    <span class="material-icons-sharp">
+                        dark_mode
+                    </span>
+                </div>
+
+                <div class="profile">
+                    <div class="info">
+                        <p>Hey, <a href="profile.html"><b>Mayabi</b></a></p>
+                        <small class="text-muted">Admin</small>
+                    </div>
+                    <div class="profile-photo">
+                        <a href="profile.html">
+                            <img src="img/Mayabi.jpg">
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            <!-- End of Nav -->
+
+            <div class="user-profile">
+                <div class="logo">
+                    <img src="img/logo.jpg.jpeg">
+                    <h2>println</h2>
+                    <p>Fullstack Web Developer</p>
+                </div>
+            </div>
+
+            <div class="reminders">
+                <div class="header">
+                    <h2>Recordatorios</h2>
+                    <span class="material-icons-sharp">
+                        notifications_none
+                    </span>
+                </div>
+
+                <div class="notification">
+                    <div class="icon">
+                        <span class="material-icons-sharp">
+                            volume_up
+                        </span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>Taller</h3>
+                            <small class="text_muted">
+                                08:00 AM - 12:00 PM
+                            </small>
+                        </div>
+                        <span class="material-icons-sharp">
+                            more_vert
+                        </span>
+                    </div>
+                </div>
+
+                <div class="notification deactive">
+                    <div class="icon">
+                        <span class="material-icons-sharp">
+                            edit
+                        </span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>Taller</h3>
+                            <small class="text_muted">
+                                08:00 AM - 12:00 PM
+                            </small>
+                        </div>
+                        <span class="material-icons-sharp">
+                            more_vert
+                        </span>
+                    </div>
+                </div>
+
+                <div class="notification add-reminder">
+                    <div>
+                        <span class="material-icons-sharp">
+                            add
+                        </span>
+                        <h3>Añadir recordatorio</h3>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <script src="javascript/membership.js"></script>
+    
+</body>
+
+</html>
