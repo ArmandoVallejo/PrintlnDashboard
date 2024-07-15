@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="styles/users.css">
+    <title>Dashboard println</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Sidebar Section -->
+        <aside>
+            <div class="toggle">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="img/logo.jpeg">
+                    </a>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">
+                        close
+                    </span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="index.html" >
+                    <span class="material-icons-sharp">
+                        dashboard
+                    </span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="users.html"class="active">
+                    <span class="material-icons-sharp">
+                        person_outline
+                    </span>
+                    <h3>Clientes</h3>
+                </a>
+                <a href="sales.html">
+                    <span class="material-icons-sharp">
+                        paid
+                    </span>
+                    <h3>Ventas</h3>
+                </a>
+                <a href="analytics.html" >
+                    <span class="material-icons-sharp">
+                        insights
+                    </span>
+                    <h3>Analíticas</h3>
+                </a>
+                <a href="products.html">
+                    <span class="material-icons-sharp">
+                        inventory
+                    </span>
+                    <h3>Productos</h3>
+                </a>
+                <a href="providers.html">
+                    <span class="material-icons-sharp">
+                        handshake
+                    </span>
+                    <h3>Proveedores</h3>
+                </a>
+                <a href="orders.html">
+                    <span class="material-icons-sharp">
+                        inventory_2
+                    </span>
+                    <h3>Ordenes</h3>
+                </a>
+                <a href="custom.html">
+                    <span class="material-icons-sharp">
+                        brush
+                    </span>
+                    <h3>Custom</h3>
+                </a>
+                <a href="reports.html">
+                    <span class="material-icons-sharp">
+                        report_gmailerrorred
+                    </span>
+                    <h3>Reportes</h3>
+                </a>
+                <a href="membership.html">
+                    <span class="material-icons-sharp">
+                        loyalty
+                    </span>
+                    <h3>Membresías</h3>
+                </a>
+                <a href="settigs.html">
+                    <span class="material-icons-sharp">
+                        settings
+                    </span>
+                    <h3>Config.</h3>
+                </a>
+                <a href="reviews.html">
+                    <span class="material-icons-sharp">
+                        rate_review
+                    </span>
+                    <h3>Reseñas</h3>
+                </a>
+                <a href="login.html">
+                    <span class="material-icons-sharp">
+                        add
+                    </span>
+                    <h3>Nuevo Login</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        logout
+                    </span>
+                    <h3>Salir</h3>
+                </a>
+            </div>
+        </aside>
+        <!-- End of Sidebar Section -->
+
+        <!-- Main Content -->
+        <main>
+            <h1>Usuarios
+            </h1>
+            <!-- Analyses -->
+            <div class="analyse">
+                <div class="sales">
+                    <div class="status">
+                        <div class="info">
+                            <h3>Ususarios nuevos</h3>
+                            <h1>1133</h1>
+                        </div>
+                        <div class="progresss">
+                            <svg>
+                                <circle cx="38" cy="38" r="36"></circle>
+                            </svg>
+                            <div class="percentage">
+                                <p>+14%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="visits">
+                    <div class="status">
+                        <div class="info">
+                            <h3>Usuarios totales</h3>
+                            <h1>24,981</h1>
+                        </div>
+                        <div class="progresss">
+                            <svg>
+                                <circle cx="38" cy="38" r="36"></circle>
+                            </svg>
+                            <div class="percentage">
+                                <p>+22%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="searches">
+                    <div class="status">
+                        <div class="info">
+                            <h3>Usuarios verificados</h3>
+                            <h1>14,147</h1>
+                        </div>
+                        <div class="progresss">
+                            <svg>
+                                <circle cx="38" cy="38" r="36"></circle>
+                            </svg>
+                            <div class="percentage">
+                                <p>+21%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                
+
+                <div class="employees-table">
+                    
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Foto</th>
+                                <th>ID</th>
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                                <th>Dirección</th>
+                                <th>Correo</th>
+                                <th>Género</th>
+                                <th>Fecha nacimiento</th>
+                                <th>Teléfono</th>
+                                <th>Última conexión</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="Pic"><img src="img/profile-2.jpg" alt="Profile Photo"></td>
+                                <td data-label="idUser">0</td>
+                                <td data-label="Name">Juan</td>
+                                <td data-label="lastName">Pérez</td>
+                                <td data-label="address">Calle Falsa 123, Ciudad Ficticia, Estado Ejemplo, 12345</td>
+                                <td data-label="mail">juan.perez@example.com</td>
+                                <td data-label="gender">Masculino</td>
+                                <td data-label="birthDate">1985-06-15</td>
+                                <td data-label="Phone">+34 600 123 456</td>
+                                <td data-label="lastLogin">2024-07-09 08:20:00</td>
+                                
+                            </tr>
+                            <tr>
+                                <td data-label="Pic"><img src="img/profile-1.jpg" alt="Profile Photo"></td>
+                                <td data-label="idUser">1</td>
+                                <td data-label="Name">María</td>
+                                <td data-label="lastName">García</td>
+                                <td data-label="address">Avenida Siempre Viva 742, Springfield, OR, 97477</td>
+                                <td data-label="mail">maria.garcia@example.com</td>
+                                <td data-label="gender">femenino</td>
+                                <td data-label="birthDate">1990-04-22</td>
+                                <td data-label="Phone">+1 541 754 3010</td>
+                                <td data-label="lastLogin">2024-07-11 12:00:00</td>
+                                
+                            </tr>
+                            <tr>
+                                <td data-label="Pic"><img src="img/profile-3.jpg" alt="Profile Photo"></td>
+                                <td data-label="idUser">2</td>
+                                <td data-label="Name">Carlos</td>
+                                <td data-label="lastName">Sánchez</td>
+                                <td data-label="address">Rua dos Bobos, 0, São Paulo, SP, 01000-000</td>
+                                <td data-label="mail">carlos.sanchez@example.com</td>
+                                <td data-label="gender">Masculino</td>
+                                <td data-label="birthDate">1978-11-30</td>
+                                <td data-label="Phone">+55 11 4002-8922</td>
+                                <td data-label="lastLogin">2024-07-11 12:00:00</td>
+                                
+                            </tr>
+                            
+              
+            
+                        </tbody>
+                    </table>
+                </div>
+            <!-- End of Analyses -->
+            <button id="add-user-btn">Añadir Usuario</button>
+    <button id="modify-user-btn">Modificar Usuario</button>
+    <button id="delete-user-btn">Borrar Usuario</button>
+
+    <div id="add-user-form" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <form>
+                <label for="add-idUser">ID del Usuario:</label>
+                <input type="text" id="add-idUser" name="idUser">
+
+                <label for="add-name">Nombre:</label>
+                <input type="text" id="add-name" name="name">
+
+                <label for="add-lastname">Apellido:</label>
+                <input type="text" id="add-lastname" name="lastname">
+
+                <label for="add-address">Dirección:</label>
+                <input type="text" id="add-address" name="address">
+
+                <label for="add-gender">Género:</label>
+                <input type="text" id="add-gender" name="gender">
+
+                <label for="add-password">Contraseña:</label>
+                <input type="password" id="add-password" name="password">
+
+                <label for="add-mail">Correo:</label>
+                <input type="email" id="add-mail" name="mail">
+
+                <label for="add-birthDate">Fecha de Nacimiento (yyyy-mm-dd):</label>
+                <input type="date" id="add-birthDate" name="birthDate">
+
+                <label for="add-phone">Teléfono:</label>
+                <input type="text" id="add-phone" name="phone">
+
+                <label for="add-lastLogin">Último Inicio de Sesión (yyyy-mm-dd hh-mm-ss):</label>
+                <input type="datetime-local" id="add-lastLogin" name="lastLogin">
+
+                <button type="submit">Añadir</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="modify-user-form" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <form>
+                <label for="modify-idUser">ID del Usuario:</label>
+                <input type="text" id="modify-idUser" name="idUser">
+
+                <label for="modify-name">Nombre:</label>
+                <input type="text" id="modify-name" name="name">
+
+                <label for="modify-lastname">Apellido:</label>
+                <input type="text" id="modify-lastname" name="lastname">
+
+                <label for="modify-address">Dirección:</label>
+                <input type="text" id="modify-address" name="address">
+
+                <label for="modify-gender">Género:</label>
+                <input type="text" id="modify-gender" name="gender">
+
+                <label for="modify-password">Contraseña:</label>
+                <input type="password" id="modify-password" name="password">
+
+                <label for="modify-mail">Correo:</label>
+                <input type="email" id="modify-mail" name="mail">
+
+                <label for="modify-birthDate">Fecha de Nacimiento (yyyy-mm-dd):</label>
+                <input type="date" id="modify-birthDate" name="birthDate">
+
+                <label for="modify-phone">Teléfono:</label>
+                <input type="text" id="modify-phone" name="phone">
+
+                <label for="modify-lastLogin">Último Inicio de Sesión (yyyy-mm-dd hh-mm-ss):</label>
+                <input type="datetime-local" id="modify-lastLogin" name="lastLogin">
+
+                <button type="submit">Modificar</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="delete-user-form" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <form>
+                <label for="delete-user-id">ID del Usuario:</label>
+                <input type="text" id="delete-user-id" name="user-id">
+
+                <label for="delete-user-email">Correo del Usuario:</label>
+                <input type="email" id="delete-user-email" name="user-email">
+
+                <button type="submit">Eliminar</button>
+            </form>
+        </div>
+    </div>
+            <!-- End of Recent Orders -->
+
+        </main>
+        <!-- End of Main Content -->
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <div class="nav">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">
+                        menu
+                    </span>
+                </button>
+                <div class="dark-mode">
+                    <span class="material-icons-sharp active">
+                        light_mode
+                    </span>
+                    <span class="material-icons-sharp">
+                        dark_mode
+                    </span>
+                </div>
+
+                <div class="profile">
+                    <div class="info">
+                        <p>Hey, <a href="profile.html"><b>Mayabi</b></a></p>
+                        <small class="text-muted">Admin</small>
+                    </div>
+                    <div class="profile-photo">
+                        <a href="profile.html">
+                            <img src="img/Mayabi.jpg">
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            <!-- End of Nav -->
+
+            
+
+            
+
+        </div>
+
+
+    </div>
+
+    
+    <script src="javascript/users.js"></script>
+    
+</body>
+
+</html>

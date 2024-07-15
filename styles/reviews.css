@@ -116,14 +116,13 @@ b{
 .container{
     display: grid;
     width: 96%;
-    margin: 0 auto;  
+    margin: 0 auto;
     gap: 1.8rem;
     grid-template-columns: 12rem auto 23rem;
 }
 
 aside{
     height: 100vh;
-    margin: 0%;
 }
 
 aside .toggle{
@@ -220,164 +219,191 @@ aside .sidebar .message-count{
     font-size: 11px;
     border-radius: var(--border-radius-1);
 }
-
-main{
-    margin-top: 1.4rem;
+ .reviews{
+    margin-top: 5%;
+}
+.top-products-table {
+    width: 97%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow-x: auto;
 }
 
-main .analyse{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.6rem;
+.top-products-table th,
+.top-products-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
 }
 
-main .analyse > div{
-    background-color: var(--color-white);
-    padding: var(--card-padding);
-    border-radius: var(--card-border-radius);
-    margin-top: 1rem;
-    box-shadow: var(--box-shadow);
-    cursor: pointer;
-    transition: all 0.3s ease;
+.top-products-table th {
+    background-color: #f0f0f0;
+    font-weight: bold;
 }
 
-main .analyse > div:hover{
-    box-shadow: none;
+
+.top-products-table td:last-child {
+    font-size: 16px;
+    color: #ffc107; 
 }
 
-main .analyse > div .status{
+
+.top-products-table td:last-child::before {
+    content: '★★★★★'; 
+    font-size: 18px;
+}
+.top-products-table,
+.accordion,
+.search-dropdown {
+    margin: 20px;
+}
+
+.search-dropdown {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    margin-bottom: 20px;
 }
 
-main .analyse h3{
-    margin-left: 0.6rem;
-    font-size: 1rem;
+.search-bar {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    flex-grow: 1;
 }
+.search-icon {
 
-main .analyse .progresss{
+    top: 50%;
+    left: 10px;
+    transform: translateX(-30%);
+    color: #000;
+}
+.dropdown {
     position: relative;
-    width: 92px;
-    height: 92px;
-    border-radius: 50%;
+    display: inline-block;
+    margin-bottom: 20px;
 }
 
-main .analyse svg{
-    width: 7rem;
-    height: 7rem;
-}
-
-main .analyse svg circle{
-    fill: none;
-    stroke-width: 10;
-    stroke-linecap: round;
-    transform: translate(5px, 5px);
-}
-
-main .analyse .sales svg circle{
-    stroke: var(--color-success);
-    stroke-dashoffset: -30;
-    stroke-dasharray: 200;
-}
-
-main .analyse .visits svg circle{
-    stroke: var(--color-danger);
-    stroke-dashoffset: -30;
-    stroke-dasharray: 200;
-}
-
-main .analyse .searches svg circle{
-    stroke: var(--color-primary);
-    stroke-dashoffset: -30;
-    stroke-dasharray: 200;
-}
-
-main .analyse .progresss .percentage{
-    position: absolute;
-    top: -3px;
-    left: -1px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-}
-
-main .new-users{
-    margin-top: 1.3rem;
-}
-
-main .new-users .user-list{
-    background-color: var(--color-white);
-    padding: var(--card-padding);
-    border-radius: var(--card-border-radius);
-    margin-top: 1rem;
-    box-shadow: var(--box-shadow);
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 1.4rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-main .new-users .user-list:hover{
-    box-shadow: none;
-}
-
-main .new-users .user-list .user{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-main .new-users .user-list .user img{
-    width: 5rem;
-    height: 5rem;
-    margin-bottom: 0.4rem;
-    border-radius: 50%;
-}
-
-main .recent-orders{
-    margin-top: 1.3rem;
-}
-
-main .recent-orders h2{
-    margin-bottom: 0.8rem;
-}
-
-main .recent-orders table{
-    background-color: var(--color-white);
-    width: 100%;
-    padding: var(--card-padding);
-    text-align: center;
-    box-shadow: var(--box-shadow);
-    border-radius: var(--card-border-radius);
-    transition: all 0.3s ease;
-}
-
-main .recent-orders table:hover{
-    box-shadow: none;
-}
-
-main table tbody td{
-    height: 2.8rem;
-    border-bottom: 1px solid var(--color-light);
-    color: var(--color-dark-variant);
-}
-
-main table tbody tr:last-child td{
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    transform: translateY(+18%);
+    font-size: 15px;
     border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
-main .recent-orders a{
-    text-align: center;
-    display: block;
-    margin: 1rem auto;
-    color: var(--color-primary);
+.dropbtn:hover {
+    background-color: #45a049;
 }
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.accordion {
+    margin-top: 20px;
+}
+
+.accordion-item {
+    background-color: #e6e5e5;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.accordion-btn {
+    background-color: #fff;
+    color: rgb(0, 0, 0);
+    padding: 14px 20px;
+    font-size: 16px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s;
+    border-radius: 5px 5px 0 0;
+}
+
+.accordion-btn:hover {
+    background-color: #dadada;
+}
+
+.accordion-content {
+    padding: 14px 20px;
+    display: none;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 0 0 5px 5px;
+    border-top: 1px solid #ccc;
+}
+
+
+.accordion-content p {
+    margin: 0;
+}
+
+
+.accordion-btn.active + .accordion-content {
+    display: block;
+}
+
+
+@media screen and (max-width: 768px) {
+    .top-products-table {
+        width: 100%;
+        overflow-x: auto;
+    }
+}
+@media screen and (max-width: 768px) {
+    .search-dropdown {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .search-bar {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .search-dropdown {
+        margin: 10px;
+    }
+}
+
+
+
 
 .right-section{
     margin-top: 1.4rem;
@@ -563,7 +589,7 @@ main .recent-orders a{
         grid-template-columns: 1fr;
         gap: 0;
     }
-
+    
     main .new-users .user-list .user{
         flex-basis: 40%;
     }

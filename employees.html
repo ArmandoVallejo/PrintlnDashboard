@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/employees.css">
+    <title>Dashboard println</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Sidebar Section -->
+        <aside>
+            <div class="toggle">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="/img/logo.jpeg">
+                    </a>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">
+                        close
+                    </span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="index.html" >
+                    <span class="material-icons-sharp">
+                        dashboard
+                    </span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="users.html">
+                    <span class="material-icons-sharp">
+                        person_outline
+                    </span>
+                    <h3>Clientes</h3>
+                </a>
+                <a href="sales.html">
+                    <span class="material-icons-sharp">
+                        paid
+                    </span>
+                    <h3>Ventas</h3>
+                </a>
+                <a href="analytics.html" >
+                    <span class="material-icons-sharp">
+                        insights
+                    </span>
+                    <h3>Analíticas</h3>
+                </a>
+                <a href="products.html">
+                    <span class="material-icons-sharp">
+                        inventory
+                    </span>
+                    <h3>Productos</h3>
+                </a>
+                <a href="providers.html">
+                    <span class="material-icons-sharp">
+                        handshake
+                    </span>
+                    <h3>Proveedores</h3>
+                </a>
+                <a href="orders.html">
+                    <span class="material-icons-sharp">
+                        inventory_2
+                    </span>
+                    <h3>Ordenes</h3>
+                </a>
+                <a href="custom.html">
+                    <span class="material-icons-sharp">
+                        brush
+                    </span>
+                    <h3>Custom</h3>
+                </a>
+                <a href="reports.html">
+                    <span class="material-icons-sharp">
+                        report_gmailerrorred
+                    </span>
+                    <h3>Reportes</h3>
+                </a>
+                <a href="membership.html">
+                    <span class="material-icons-sharp">
+                        loyalty
+                    </span>
+                    <h3>Membresías</h3>
+                </a>
+                <a href="settigs.html">
+                    <span class="material-icons-sharp">
+                        settings
+                    </span>
+                    <h3>Config.</h3>
+                </a>
+                <a href="reviews.html"class="active">
+                    <span class="material-icons-sharp">
+                        rate_review
+                    </span>
+                    <h3>Reseñas</h3>
+                </a>
+                <a href="login.html">
+                    <span class="material-icons-sharp">
+                        add
+                    </span>
+                    <h3>Nuevo Login</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        logout
+                    </span>
+                    <h3>Salir</h3>
+                </a>
+            </div>
+        </aside>
+        <!-- End of Sidebar Section -->
+
+ <!-- Main Content -->
+<main>
+    <h1> Gestión de personal.
+    </h1>
+    <!-- Analyses -->
+    <div class="analyse">
+        <div class="sales">
+            <div class="status">
+                <div class="info">
+                    <h3>Sueldo promedio</h3>
+                    <h1>$12,000</h1>
+                </div>
+                <div class="progresss">
+                    <svg>
+                        <circle cx="38" cy="38" r="36"></circle>
+                    </svg>
+                    <div class="percentage">
+                        <p>45%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="visits">
+            <div class="status">
+                <div class="info">
+                    <h3>Departamento mas grande</h3>
+                    <h1>Marketing </h1>
+                </div>
+                <div class="progresss">
+                    <svg>
+                        <circle cx="38" cy="38" r="36"></circle>
+                    </svg>
+                    <div class="percentage">
+                        <p>43.75%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="searches">
+            <div class="status">
+                <div class="info">
+                    <h3>Departamento mejor pagado</h3>
+                    <h1>Gerencia</h1>
+                </div>
+                <div class="progresss">
+                    <svg>
+                        <circle cx="38" cy="38" r="36"></circle>
+                    </svg>
+                    <div class="percentage">
+                        <p>25%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of Analyses -->
+    <div class="employees-table">
+        <h2>Listado de personal.</h2>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Foto</th>
+                    <th>Nombre</th>
+                    <th>Apellido Pat</th>
+                    <th>Apellido Mat</th>
+                    <th>Correo</th>
+                    <th>Género</th>
+                    <th>Edad</th>
+                    <th>Puesto</th>
+                    <th>Horario</th>
+                    <th>Check-in</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="Foto"><img src="img/profile-1.jpg" alt="Profile Photo"></td>
+                    <td data-label="Nombre">Juan</td>
+                    <td data-label="Apellido Paterno">Pérez</td>
+                    <td data-label="Apellido Materno">Gómez</td>
+                    <td data-label="Correo electrónico">juan.perez@example.com</td>
+                    <td data-label="Género">Masculino</td>
+                    <td data-label="Edad (años)">39</td>
+                    <td data-label="Puesto">Desarrollador</td>
+                    <td data-label="Horario">9:00 - 18:00</td>
+                    <td data-label="Checkin">Presente</td>
+                </tr>
+                <tr>
+                    <td data-label="Foto"><img src="img/profile-2.jpg" alt="Profile Photo"></td>
+                    <td data-label="Nombre">María</td>
+                    <td data-label="Apellido Paterno">González</td>
+                    <td data-label="Apellido Materno">Martínez</td>
+                    <td data-label="Correo electrónico">maria.gonzalez@example.com</td>
+                    <td data-label="Género">Femenino</td>
+                    <td data-label="Edad (años)">28</td>
+                    <td data-label="Puesto">Diseñador</td>
+                    <td data-label="Horario">10:00 - 19:00</td>
+                    <td data-label="Checkin">Ausente</td>
+                </tr>
+                <tr>
+                    <td data-label="Foto"><img src="img/profile-3.jpg" alt="Profile Photo"></td>
+                    <td data-label="Nombre">Pedro</td>
+                    <td data-label="Apellido Paterno">López</td>
+                    <td data-label="Apellido Materno">Hernández</td>
+                    <td data-label="Correo electrónico">pedro.lopez@example.com</td>
+                    <td data-label="Género">Masculino</td>
+                    <td data-label="Edad (años)">42</td>
+                    <td data-label="Puesto">Analista Financiero</td>
+                    <td data-label="Horario">8:30 - 17:30</td>
+                    <td data-label="Checkin">Presente</td>
+                </tr>
+                <tr>
+                    <td data-label="Foto"><img src="img/profile-4.jpg" alt="Profile Photo"></td>
+                    <td data-label="Nombre">Ana</td>
+                    <td data-label="Apellido Paterno">Rodríguez</td>
+                    <td data-label="Apellido Materno">Sánchez</td>
+                    <td data-label="Correo electrónico">ana.rodriguez@example.com</td>
+                    <td data-label="Género">Femenino</td>
+                    <td data-label="Edad (años)">35</td>
+                    <td data-label="Puesto">Ingeniera de Software</td>
+                    <td data-label="Horario">9:00 - 18:00</td>
+                    <td data-label="Checkin">Presente</td>
+                </tr>
+                <tr>
+                    <td data-label="Foto"><img src="img/profile-1.jpg" alt="Profile Photo"></td>
+                    <td data-label="Nombre">Carlos</td>
+                    <td data-label="Apellido Paterno">Ruiz</td>
+                    <td data-label="Apellido Materno">Gómez</td>
+                    <td data-label="Correo electrónico">carlos.ruiz@example.com</td>
+                    <td data-label="Género">Masculino</td>
+                    <td data-label="Edad (años)">45</td>
+                    <td data-label="Puesto">Gerente de Proyectos</td>
+                    <td data-label="Horario">8:00 - 17:00</td>
+                    <td data-label="Checkin">Presente</td>
+                </tr>
+                <tr>
+                    <td data-label="Foto"><img src="img/profile-2.jpg" alt="Profile Photo"></td>
+                    <td data-label="Nombre">Elena</td>
+                    <td data-label="Apellido Paterno">Fernández</td>
+                    <td data-label="Apellido Materno">Pérez</td>
+                    <td data-label="Correo electrónico">elena.fernandez@example.com</td>
+                    <td data-label="Género">Femenino</td>
+                    <td data-label="Edad (años)">33</td>
+                    <td data-label="Puesto">Consultora de Recursos Humanos</td>
+                    <td data-label="Horario">9:00 - 18:00</td>
+                    <td data-label="Checkin">Ausente</td>
+                </tr>
+  
+
+            </tbody>
+        </table>
+    </div>
+
+    <button id="add-user-btn">Añadir Empleado</button>
+    <button id="modify-user-btn">Modificar Empleado</button>
+    <button id="delete-user-btn">Borrar Empleado</button>
+    
+    <div id="add-user-form" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <form>
+                <label for="add-name">Nombre:</label>
+                <input type="text" id="add-name" name="name">
+    
+                <label for="add-lastname">Apellido Paterno:</label>
+                <input type="text" id="add-lastname" name="lastname">
+    
+                <label for="add-lastname2">Apellido Materno:</label>
+                <input type="text" id="add-lastname2" name="lastname2">
+    
+                <label for="add-mail">Correo:</label>
+                <input type="email" id="add-mail" name="mail">
+    
+                <label for="add-gender">Género:</label>
+                <input type="text" id="add-gender" name="gender">
+    
+                <label for="add-birthDate">Fecha de Nacimiento (yyyy-mm-dd):</label>
+                <input type="date" id="add-birthDate" name="birthDate">
+    
+                <label for="add-phone">Teléfono:</label>
+                <input type="text" id="add-phone" name="phone">
+    
+                <label for="add-job">Puesto de Trabajo:</label>
+                <input type="text" id="add-job" name="job">
+    
+                <label for="add-photo">Foto:</label>
+                <input type="file" id="add-photo" name="photo" accept="image/*">
+    
+                <button type="submit">Añadir</button>
+            </form>
+        </div>
+    </div>
+    
+    <div id="modify-user-form" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <form>
+                <label for="modify-name">Nombre:</label>
+                <input type="text" id="modify-name" name="name">
+    
+                <label for="modify-lastname">Apellido Paterno:</label>
+                <input type="text" id="modify-lastname" name="lastname">
+    
+                <label for="modify-lastname2">Apellido Materno:</label>
+                <input type="text" id="modify-lastname2" name="lastname2">
+    
+                <label for="modify-mail">Correo:</label>
+                <input type="email" id="modify-mail" name="mail">
+    
+                <label for="modify-gender">Género:</label>
+                <input type="text" id="modify-gender" name="gender">
+    
+                <label for="modify-birthDate">Fecha de Nacimiento (yyyy-mm-dd):</label>
+                <input type="date" id="modify-birthDate" name="birthDate">
+    
+                <label for="modify-phone">Teléfono:</label>
+                <input type="text" id="modify-phone" name="phone">
+    
+                <label for="modify-job">Puesto de Trabajo:</label>
+                <input type="text" id="modify-job" name="job">
+    
+                <label for="modify-photo">Foto:</label>
+                <input type="file" id="modify-photo" name="photo" accept="image/*">
+    
+                <button type="submit">Modificar</button>
+            </form>
+        </div>
+    </div>
+    
+</main>
+<!-- End of Main Content -->
+
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <div class="nav">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">
+                        menu
+                    </span>
+                </button>
+                <div class="dark-mode">
+                    <span class="material-icons-sharp active">
+                        light_mode
+                    </span>
+                    <span class="material-icons-sharp">
+                        dark_mode
+                    </span>
+                </div>
+
+                <div class="profile">
+                    <div class="info">
+                        <p>Hey, <a href="profile.html"><b>Mayabi</b></a></p>
+                        <small class="text-muted">Admin</small>
+                    </div>
+                    <div class="profile-photo">
+                        <a href="profile.html">
+                            <img src="img/Mayabi.jpg">
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            <!-- End of Nav -->
+
+            <div class="user-profile">
+                <div class="logo">
+                    <img src="img/logo.jpeg">
+                    <h2>println</h2>
+                    <p>Fullstack Web Developer</p>
+                </div>
+            </div>
+
+            <div class="reminders">
+                <div class="header">
+                    <h2>Recordatorios</h2>
+                    <span class="material-icons-sharp">
+                        notifications_none
+                    </span>
+                </div>
+
+                <div class="notification">
+                    <div class="icon">
+                        <span class="material-icons-sharp">
+                            volume_up
+                        </span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>Taller</h3>
+                            <small class="text_muted">
+                                08:00 AM - 12:00 PM
+                            </small>
+                        </div>
+                        <span class="material-icons-sharp">
+                            more_vert
+                        </span>
+                    </div>
+                </div>
+
+                <div class="notification deactive">
+                    <div class="icon">
+                        <span class="material-icons-sharp">
+                            edit
+                        </span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>Taller</h3>
+                            <small class="text_muted">
+                                08:00 AM - 12:00 PM
+                            </small>
+                        </div>
+                        <span class="material-icons-sharp">
+                            more_vert
+                        </span>
+                    </div>
+                </div>
+
+                <div class="notification add-reminder">
+                    <div>
+                        <span class="material-icons-sharp">
+                            add
+                        </span>
+                        <h3>Añadir recordatorio</h3>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+    <script src="javascript/employees.js"></script>
+    <script src="javascript/index.js"></script>
+    
+</body>
+
+</html>
