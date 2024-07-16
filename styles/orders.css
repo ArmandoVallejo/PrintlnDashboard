@@ -59,6 +59,7 @@ body{
     width: 100%;
     border-collapse: separate;
     border-spacing: 0 10px;
+    background-color: white;
 }
 
 .table th,
@@ -82,15 +83,13 @@ body{
 
 
 .table-hover tbody tr:hover {
-    background-color: #e9ecef;
+    background-color: white;
 }
 
 #searchInput {
     border: 1px solid #343a40;
     padding: 10px;
 }
-
-
 
 a{
     color: var(--color-dark);
