@@ -118,7 +118,7 @@ b{
     width: 96%;
     margin: 0 auto;
     gap: 1.8rem;
-    grid-template-columns: 12rem auto 23rem;
+    grid-template-columns: 15% 56% 23%;
 }
 
 aside{
@@ -539,7 +539,10 @@ main .recent-orders a{
 @media screen and (max-width: 1200px) {
     .container{
         width: 95%;
-        grid-template-columns: 7rem auto 23rem;
+        grid-template-columns: 10% 56% 28%;
+    }
+    aside .toggle .logo img {
+        width: 100%;
     }
 
     aside .logo h2{
@@ -595,8 +598,12 @@ main .recent-orders a{
 @media screen and (max-width: 768px) {
     .container{
         width: 100%;
-        grid-template-columns: 1fr;
+        grid-template-columns: 100%;
         padding: 0 var(--padding-1);
+    }
+
+    aside .toggle .logo img {
+        width: 11rem;
     }
 
     aside{
