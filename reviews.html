@@ -28,7 +28,7 @@
             </div>
 
             <div class="sidebar">
-                <a href="index.html" >
+                <a href="index.html">
                     <span class="material-icons-sharp">
                         dashboard
                     </span>
@@ -46,7 +46,7 @@
                     </span>
                     <h3>Ventas</h3>
                 </a>
-                <a href="analytics.html" >
+                <a href="analytics.html">
                     <span class="material-icons-sharp">
                         insights
                     </span>
@@ -88,14 +88,19 @@
                     </span>
                     <h3>Membresías</h3>
                 </a>
-                
+
                 <a href="reviews.html" class="active">
                     <span class="material-icons-sharp">
                         rate_review
                     </span>
                     <h3>Reseñas</h3>
                 </a>
-                
+                <a href="bitacora.html">
+                    <span class="material-icons-sharp">
+                        book
+                    </span>
+                    <h3>Bitácora</h3>
+                </a>
                 <a href="login.html">
                     <span class="material-icons-sharp">
                         logout
@@ -106,110 +111,150 @@
         </aside>
         <!-- End of Sidebar Section -->
 
- <!-- Main Content -->
-<main>
+        <!-- Main Content -->
+        <main>
 
-    <div class="reviews">
+            <div class="reviews">
 
-        <h2>Valoración de los productos más vendidos</h2>
-        <table class="top-products-table">
-            <thead>
-                <tr>
-                    <th>Producto</th>
-                    <th>Número de Ventas</th>
-                    <th>Valoración</th>
-                </tr>
-            </thead>
-            <tbody>
-   
-                <tr>
-                    <td>Playera malayerba</td>
-                    <td>150</td>
-                    <td></td>
-                 
-                </tr>
+                <h2>Valoración de los productos más vendidos</h2>
+                <table class="top-products-table">
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Número de Ventas</th>
+                            <th>Valoración</th>
+                        </tr>
+                    </thead>
+                    <tbody>
 
-                <tr>
-                    <td>Playera baki</td>
-                    <td>120</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>Playera personalizada</td>
-                    <td>100</td>
-                    <td></td>
-                </tr>
-            </tbody>
-        </table>
+                        <tr>
+                            <td>Playera malayerba</td>
+                            <td>150</td>
+                            <td></td>
 
-        <h2>Reseñas de los productos</h2>
-        <div class="search-dropdown">
-            
-            <input type="text" class="search-bar" placeholder="Buscar productos por nombre, marca...">
-      <span class="material-icons-sharp search-icon">search</span>
-        
-        <div class="dropdown">
-        
-            <button class="dropbtn">o selecciona una categoría</button>
-            <div class="dropdown-content">
- 
-                <a href="#">Tendencias</a>
-                <a href="#">Casual</a>
-                <a href="#">Deportivo</a>
-                <a href="#">Verano</a>
-                <a href="#">Personalizado</a>
-  
-            </div>
-        </div>
-    </div> 
-        <div class="accordion">
+                        </tr>
 
-            <div class="accordion-item">
+                        <tr>
+                            <td>Playera baki</td>
+                            <td>120</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Playera personalizada</td>
+                            <td>100</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
 
-                <button class="accordion-btn">Playera Rick and Morty</button>
-                <div class="accordion-content">
+                <h2>Reseñas de los productos</h2>
+                <div class="search-dropdown">
 
-                    <p><b>Antonio López Tarso ★★★★☆</b></p>
-                    <p>Soy fan de la serie, la playera es muy bonita pero tardó un poco el envío.</p>
-                    <br></br>
-                    <p><b>Picafresa roja ★★★★☆</b></p>
-                    <p>Me gusta mucho comprar aquí, solo que esta vez me quedó un algo grande la playera :c.</p>
-                    <br></br>
-                    <p><b>Chavorruco1972 ★★★★★</b></p>
-                    <p>Muy buena tela, llegó a tiempo.</p>
+                    <input type="text" class="search-bar" placeholder="Buscar productos por nombre, marca...">
+                    <span class="material-icons-sharp search-icon">search</span>
+
+                    <div class="dropdown">
+
+                        <button class="dropbtn">o selecciona una categoría</button>
+                        <div class="dropdown-content">
+
+                            <a href="#">Tendencias</a>
+                            <a href="#">Casual</a>
+                            <a href="#">Deportivo</a>
+                            <a href="#">Verano</a>
+                            <a href="#">Personalizado</a>
+
+                        </div>
+                    </div>
                 </div>
-            </div>
+                <div class="accordion">
 
-            <div class="accordion-item">
-                <button class="accordion-btn">Playera Apache Netfrijoles</button>
-                <div class="accordion-content">
-     
-                    <p><b>Pancracio Medina ★★★★★</b></p>
-                    <p>Me gustó mucho la playera porque siento que soy medio frijolero y el diseño es de eso.</p>
-                    <br></br>
-                    <p><b>Chavorruco1972 ★★★★★</b></p>
-                    <p>Segunda compra, muy buen servicio.</p>
-                </div>
-            </div>
-          
-            <div class="accordion-item">
-                <button class="accordion-btn">Playera malayerba</button>
-                <div class="accordion-content">
+                    <div class="accordion-item">
 
-                    <p><b>MrCrown ★★★★★</b></p>
-                    <p>Me gusta mucho la malayerba, recomendada 100%.</p>
-                    <br></br>
-                    <p><b>PinchTripod69 ★☆☆☆☆</b></p>
-                    <p>Pésimo diseño, mejor me compro otras en borderline.ink.</p>
-                </div>
-            </div>
-   
-        </div>
- 
+                        <button class="accordion-btn">Playera Rick and Morty</button>
+                        <div class="accordion-content">
+
+                            <p><b>Antonio López Tarso ★★★★☆</b></p>
+                            <p>Soy fan de la serie, la playera es muy bonita pero tardó un poco el envío.</p>
+                            <p><button class="review-fbk">Responder</button> <button
+                                    class="review-del">Eliminar</button></p>
+                            <br></br>
+                            <p><b>Picafresa roja ★★★★☆</b></p>
+                            <p>Me gusta mucho comprar aquí, solo que esta vez me quedó un algo grande la playera :c.</p>
+                            <p><button class="review-fbk">Responder</button> <button
+                                    class="review-del">Eliminar</button></p>
+                            <br></br>
+                            <p><b>Chavorruco1972 ★★★★★</b></p>
+                            <p>Muy buena tela, llegó a tiempo.</p>
+                            <p><button class="review-fbk">Responder</button> <button
+                                    class="review-del">Eliminar</button></p>
+
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-btn">Playera Apache Netfrijoles</button>
+                        <div class="accordion-content">
+
+                            <p><b>Pancracio Medina ★★★★★</b></p>
+                            <p>Me gustó mucho la playera porque siento que soy medio frijolero y el diseño es de eso.
+                            </p>
+                            <p><button class="review-fbk">Responder</button> <button
+                                    class="review-del">Eliminar</button></p>
+
+                            <br></br>
+                            <p><b>Chavorruco1972 ★★★★★</b></p>
+                            <p>Segunda compra, muy buen servicio.</p>
+                            <p><button class="review-fbk">Responder</button> <button
+                                    class="review-del">Eliminar</button></p>
+                                  
+
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-btn">Playera malayerba</button>
+                        <div class="accordion-content">
+
+                            <p><b>MrCrown ★★★★★</b></p>
+                            <p>Me gusta mucho la malayerba, recomendada 100%.</p>
+                            <p><button class="review-fbk">Responder</button> <button
+                                    class="review-del">Eliminar</button></p>
+                            <br></br>
+                            <p><b>PinchTripod69 ★☆☆☆☆</b></p>
+                            <p>Pésimo diseño, mejor me compro otras en borderline.ink.</p>
+                            <p><button class="review-fbk">Responder</button> <button
+                                    class="review-del">Eliminar</button></p>
+
+                        </div>
+                    </div>
+ <!-- Modal for "Responder" -->
+ <div id="modalResponder" class="modal">
+    <div class="modal-content">
+        <span class="close" id="closeResponder">&times;</span>
+        <h2>Escribe tu respuesta</h2>
+        <form id="formResponder">
+            <textarea name="respuesta" rows="4" cols="30" placeholder="Escribe tu respuesta aquí..."></textarea><br>
+            <button type="submit" class="btn">Enviar</button>
+        </form>
     </div>
-   
-</main>
-<!-- End of Main Content -->
+</div>
+
+<!-- Modal for "Eliminar" -->
+<div id="modalEliminar" class="modal">
+    <div class="modal-content">
+        <span class="close" id="closeEliminar">&times;</span>
+        <h2>¿Seguro que desea borrar este comentario?</h2>
+        <button id="confirmarEliminar" class="btn">Confirmar</button>
+        <button id="cancelarEliminar" class="btn">Cancelar</button>
+    </div>
+</div>
+                </div>
+
+            </div>
+
+        </main>
+        <!-- End of Main Content -->
 
 
         <!-- Right Section -->
