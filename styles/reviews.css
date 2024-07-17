@@ -224,6 +224,7 @@ aside .sidebar .message-count{
 }
 .top-products-table {
     width: 97%;
+    background-color: #ffffff;
     margin-top: 10px;
     margin-bottom: 20px;
     border-collapse: collapse;
@@ -236,11 +237,11 @@ aside .sidebar .message-count{
 .top-products-table td {
     padding: 12px;
     text-align: left;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #cccccc;
 }
 
 .top-products-table th {
-    background-color: #f0f0f0;
+    background-color: #ffffff;
     font-weight: bold;
 }
 
@@ -328,7 +329,32 @@ aside .sidebar .message-count{
 .dropdown:hover .dropdown-content {
     display: block;
 }
-
+.review-fbk {
+    background-color: #ffffff;
+    color: #677483;
+    padding: 3px 5px;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.review-del {
+    background-color: #ffffff;
+    color: #677483;
+    padding: 3px 5px;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.review-fbk:hover{
+    background-color: #cefdd2;
+}
+.review-del:hover{
+    background-color: #f7bdbd;
+}
 .accordion {
     margin-top: 20px;
 }
@@ -336,7 +362,7 @@ aside .sidebar .message-count{
 .accordion-item {
     background-color: #e6e5e5;
     margin-bottom: 10px;
-    border-radius: 5px;
+    border-radius: 9px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
@@ -351,7 +377,7 @@ aside .sidebar .message-count{
     cursor: pointer;
     outline: none;
     transition: background-color 0.3s;
-    border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 5px 5px;
 }
 
 .accordion-btn:hover {
@@ -370,6 +396,7 @@ aside .sidebar .message-count{
 
 .accordion-content p {
     margin: 0;
+    color: #000;
 }
 
 
@@ -733,4 +760,45 @@ aside .sidebar .message-count{
         font-size: 2rem;
     }
 
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 11%;
+
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    align-self: center;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 4%;
+    max-width: 300px;
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.btn {
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 3px;
 }
