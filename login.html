@@ -15,7 +15,7 @@
                     <h4 class="title">Bienvenido al sistema de administración de Println.</h4>
                 </div>
                 <div id="loginbox" class="loginbox">
-                    <form action method="post" name="login" id="login-form">
+                    <form action="#" method="post" name="login" id="login-form" onsubmit="return validateForm()">
                         <fieldset class="input">
                             <p id="login-advice">
                                 <label for="modlgn_username">Esta página es exclusiva para los usuarios administradores.</label>
@@ -31,7 +31,7 @@
                             <input type="submit" name="Submit" class="button" value="Ingresar" />
                             <div class="remember">
                                 <p>
-                                    <label for="modlgn_remember">¿Problemas para iniciar sesión? Contacte al equipo de <a href="#"><b>Soporte.</b></a></label>
+                                    <label for="modlgn_remember">¿Problemas para iniciar sesión? Contacte al equipo de <a href="#" onclick="showSupportModal()"><b>Soporte.</b></a></label>
                                 </p>
                             </div>
                         </fieldset>
@@ -40,6 +40,15 @@
             </div>
         </div>
     </div>
-<script src="/javascript/login.js"></script>
+
+    <div id="supportModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeSupportModal()">&times;</span>
+            <p>Soporte Println:</p>
+            <p>Println@soporte.com o llame al teléfono 449 278 50 36</p>
+        </div>
+    </div>
+
+    <script src="/javascript/login.js"></script>
 </body>
 </html>

@@ -117,7 +117,7 @@
             <div class="reviews">
 
                 <h2>Valoración de los productos más vendidos</h2>
-                <table class="top-products-table">
+                <table class="top-products-table-custom">
                     <thead>
                         <tr>
                             <th>Producto</th>
@@ -126,26 +126,39 @@
                         </tr>
                     </thead>
                     <tbody>
-
-                        <tr>
-                            <td>Playera malayerba</td>
+                        <tr
+                            onclick="showModalCustom('Playera malayerba', 'img/malayerba.jpg', 'Producto 100% Mexicano, ideal para cualquier ocasión', 5)">
+                            <td><img src="img/malayerba.jpg" alt="Playera malayerba">Playera malayerba</td>
                             <td>150</td>
                             <td></td>
-
                         </tr>
+                        <tr
+                            onclick="showModalCustom('Playera baki', 'img/baki.jpg', 'Hereda los poderes del hijo del ogro con esta increible playera', 5)">
+                            <td><img src="img/baki.jpg" alt="Playera baki">Playera baki</td>
 
-                        <tr>
-                            <td>Playera baki</td>
                             <td>120</td>
                             <td></td>
                         </tr>
-                        <tr>
-                            <td>Playera personalizada</td>
+                        <tr
+                            onclick="showModalCustom('Playera personalizada', 'img/personalizada.jpg', 'Tus diseños, tus ideas, tu personalidad', 5)">
+                            <td><img src="img/personalizada.jpg" alt="Playera personalizada">Playera personalizada</td>
+
                             <td>100</td>
                             <td></td>
                         </tr>
                     </tbody>
                 </table>
+
+                <div id="productModal" class="modal-custom">
+                    <div class="modal-content-custom">
+                        <span class="close-custom" onclick="closeModalCustom()">&times;</span>
+                        <h2 id="productModalLabelCustom">Nombre del Producto</h2>
+                        <img id="productImageCustom" src="" alt="Imagen del Producto" class="img-fluid">
+                        <p id="productDescriptionCustom">Descripción del Producto</p>
+                        <p id="productRatingCustom"><b>Valoración:</b> ★★★★☆</p>
+                        <button class="btn-custom" onclick="showReviews('malayerba-reviews')">Ver reseñas</button>
+                    </div>
+                </div>
 
                 <h2>Reseñas de los productos</h2>
                 <div class="search-dropdown">
@@ -173,21 +186,34 @@
 
                         <button class="accordion-btn">Playera Rick and Morty</button>
                         <div class="accordion-content">
-
-                            <p><b>Antonio López Tarso ★★★★☆</b></p>
-                            <p>Soy fan de la serie, la playera es muy bonita pero tardó un poco el envío.</p>
-                            <p><button class="review-fbk">Responder</button> <button
-                                    class="review-del">Eliminar</button></p>
-                            <br></br>
-                            <p><b>Picafresa roja ★★★★☆</b></p>
-                            <p>Me gusta mucho comprar aquí, solo que esta vez me quedó un algo grande la playera :c.</p>
-                            <p><button class="review-fbk">Responder</button> <button
-                                    class="review-del">Eliminar</button></p>
-                            <br></br>
-                            <p><b>Chavorruco1972 ★★★★★</b></p>
-                            <p>Muy buena tela, llegó a tiempo.</p>
-                            <p><button class="review-fbk">Responder</button> <button
-                                    class="review-del">Eliminar</button></p>
+                            <img src="img/rickmorty.jpg" alt="Playera morty" class="img-fluid">
+                            <h3><b>Playera Rick and Morty</b></h3>
+                            <h3>$399.90</h3>
+                            <h3>★★★★☆<h3>
+                                    <h4>
+                                        <p>Descripción:</p>
+                                    </h4>
+                                    <p>Muestra tu afición por Rick and Morty con esta playera oficial.
+                                        El diseño exclusivo y los materiales de primera categoría hacen que sea una
+                                        elección perfecta para cualquier ocasión.
+                                        Disfruta de la comodidad y el estilo que solo esta playera puede ofrecer.</p>
+                                    <br>
+                                    <p><b>Comentarios</b></p>
+                                    <p><b>Antonio López Tarso ★★★★☆</b></p>
+                                    <p>Soy fan de la serie, la playera es muy bonita pero tardó un poco el envío.</p>
+                                    <p><button class="review-fbk">Responder</button> <button
+                                            class="review-del">Eliminar</button></p>
+                                    <br>
+                                    <p><b>Picafresa roja ★★★★☆</b></p>
+                                    <p>Me gusta mucho comprar aquí, solo que esta vez me quedó un algo grande la playera
+                                        :c.</p>
+                                    <p><button class="review-fbk">Responder</button> <button
+                                            class="review-del">Eliminar</button></p>
+                                    <br>
+                                    <p><b>Chavorruco1972 ★★★★★</b></p>
+                                    <p>Muy buena tela, llegó a tiempo.</p>
+                                    <p><button class="review-fbk">Responder</button> <button
+                                            class="review-del">Eliminar</button></p>
 
                         </div>
                     </div>
@@ -195,60 +221,112 @@
                     <div class="accordion-item">
                         <button class="accordion-btn">Playera Apache Netfrijoles</button>
                         <div class="accordion-content">
+                            <img src="img/netfrijoles.jpg" alt="Playera Netfrijoles" class="img-fluid">
+                            <h3><b>Playera Netfrijoles</b></h3>
+                            <h3>$439.90</h3>
+                            <h3>★★★★★<h3>
+                                    <h4>
+                                        <p>Descripción:</p>
+                                    </h4>
+                                    <p>La playera de Apache Netfrijoles combina estilo y confort con un diseño único y
+                                        humorístico.
+                                        Confeccionada con materiales de alta calidad, es perfecta para cualquier
+                                        fanático que quiera
+                                        agregar un toque de diversión a su guardarropa.</p>
+                                    <br>
+                                    <p><b>Comentarios</b></p>
+                                    <p><b>Pancracio Medina ★★★★★</b></p>
+                                    <p>Me gustó mucho la playera porque siento que soy medio frijolero y el diseño es de
+                                        eso.
+                                    </p>
+                                    <p><button class="review-fbk">Responder</button> <button
+                                            class="review-del">Eliminar</button></p>
 
-                            <p><b>Pancracio Medina ★★★★★</b></p>
-                            <p>Me gustó mucho la playera porque siento que soy medio frijolero y el diseño es de eso.
-                            </p>
-                            <p><button class="review-fbk">Responder</button> <button
-                                    class="review-del">Eliminar</button></p>
+                                    <br>
+                                    <p><b>Chavorruco1972 ★★★★★</b></p>
+                                    <p>Segunda compra, muy buen servicio.</p>
+                                    <p><button class="review-fbk">Responder</button> <button
+                                            class="review-del">Eliminar</button></p>
 
-                            <br></br>
-                            <p><b>Chavorruco1972 ★★★★★</b></p>
-                            <p>Segunda compra, muy buen servicio.</p>
-                            <p><button class="review-fbk">Responder</button> <button
-                                    class="review-del">Eliminar</button></p>
-                                  
 
                         </div>
                     </div>
 
                     <div class="accordion-item">
                         <button class="accordion-btn">Playera malayerba</button>
-                        <div class="accordion-content">
-
+                        <div id="malayerba-reviews" class="accordion-content">
+                            <img src="img/malayerba.jpg" alt="Playera malayerba" class="img-fluid">
+                            <h3><b>Playera malayerba</b></h3>
+                            <h3>$339.90</h3>
+                            <h3>★★★★★</h3>
+                            <h4>
+                                <p>Descripción:</p>
+                            </h4>
+                            <p>Añade un toque de estilo contemporáneo a tu guardarropa con esta playera de Malayerba.
+                                El diseño innovador y la tela cómoda hacen que sea una prenda versátil y esencial para
+                                cualquier amante de la moda moderna.</p>
+                            <br>
+                            <p><b>Comentarios</b></p>
                             <p><b>MrCrown ★★★★★</b></p>
                             <p>Me gusta mucho la malayerba, recomendada 100%.</p>
                             <p><button class="review-fbk">Responder</button> <button
                                     class="review-del">Eliminar</button></p>
-                            <br></br>
+                            <br>
                             <p><b>PinchTripod69 ★☆☆☆☆</b></p>
                             <p>Pésimo diseño, mejor me compro otras en borderline.ink.</p>
                             <p><button class="review-fbk">Responder</button> <button
                                     class="review-del">Eliminar</button></p>
+                            <br>
+                            <p><b>JuanPerez ★★★★★</b></p>
+                            <p>La playera es excelente, supera mis expectativas. La calidad es muy buena y el diseño es
+                                genial.</p>
+                            <p><button class="review-fbk">Responder</button> <button
+                                    class="review-del">Eliminar</button></p>
 
+                            <br>
+                            <p><b>AnaMartinez ★★★★★</b></p>
+                            <p>Muy contenta con mi compra. La tela es suave y cómoda, y la impresión es de alta calidad.
+                            </p>
+                            <p><button class="review-fbk">Responder</button> <button
+                                    class="review-del">Eliminar</button></p>
+
+                            <br>
+                            <p><b>CarlosGomez ★★★★★</b></p>
+                            <p>Perfecta, justo lo que esperaba. Llegó rápido y el tamaño es el adecuado. Recomendada
+                                100%.</p>
+                            <p><button class="review-fbk">Responder</button> <button
+                                    class="review-del">Eliminar</button></p>
+
+                            <br>
+                            <p><b>LauraRodriguez ★★★★★</b></p>
+                            <p>Me encanta esta playera, es de muy buena calidad y el diseño es exactamente como en la
+                                foto.</p>
+                            <p><button class="review-fbk">Responder</button> <button
+                                    class="review-del">Eliminar</button></p>
                         </div>
                     </div>
- <!-- Modal for "Responder" -->
- <div id="modalResponder" class="modal">
-    <div class="modal-content">
-        <span class="close" id="closeResponder">&times;</span>
-        <h2>Escribe tu respuesta</h2>
-        <form id="formResponder">
-            <textarea name="respuesta" rows="4" cols="30" placeholder="Escribe tu respuesta aquí..."></textarea><br>
-            <button type="submit" class="btn">Enviar</button>
-        </form>
-    </div>
-</div>
+                    <!-- Modal for "Responder" -->
+                    <div id="modalResponder" class="modal">
+                        <div class="modal-content">
+                            <span class="close" id="closeResponder">&times;</span>
+                            <h2>Escribe tu respuesta</h2>
+                            <form id="formResponder">
+                                <textarea name="respuesta" rows="4" cols="30"
+                                    placeholder="Escribe tu respuesta aquí..."></textarea><br>
+                                <button type="submit" class="btn">Enviar</button>
+                            </form>
+                        </div>
+                    </div>
 
-<!-- Modal for "Eliminar" -->
-<div id="modalEliminar" class="modal">
-    <div class="modal-content">
-        <span class="close" id="closeEliminar">&times;</span>
-        <h2>¿Seguro que desea borrar este comentario?</h2>
-        <button id="confirmarEliminar" class="btn">Confirmar</button>
-        <button id="cancelarEliminar" class="btn">Cancelar</button>
-    </div>
-</div>
+                    <!-- Modal for "Eliminar" -->
+                    <div id="modalEliminar" class="modal">
+                        <div class="modal-content">
+                            <span class="close" id="closeEliminar">&times;</span>
+                            <h2>¿Seguro que desea borrar este comentario?</h2>
+                            <button id="confirmarEliminar" class="btn">Confirmar</button>
+                            <button id="cancelarEliminar" class="btn">Cancelar</button>
+                        </div>
+                    </div>
                 </div>
 
             </div>
