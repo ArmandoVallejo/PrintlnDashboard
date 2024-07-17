@@ -76,3 +76,59 @@
     cancelarEliminar.onclick = function() {
         modalEliminar.style.display = "none";
     }
+
+
+
+
+
+    function showModalCustom(name, image, description, rating) {
+        document.getElementById('productModalLabelCustom').textContent = name;
+        document.getElementById('productImageCustom').src = image;
+        document.getElementById('productDescriptionCustom').textContent = description;
+        document.getElementById('productRatingCustom').textContent = 'Valoración: ' + '★'.repeat(rating) + '☆'.repeat(5 - rating);
+        document.getElementById('productModal').style.display = "block";
+    }
+
+    function closeModalCustom() {
+        document.getElementById('productModal').style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        var modal = document.getElementById('productModal');
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+    
+    function showReviews(reviewId) {
+        // Cierra el modal
+        closeModalCustom();
+
+        // Encuentra el acordeón correspondiente y ábrelo
+        var accordionContent = document.getElementById(reviewId);
+        if (accordionContent) {
+            var accordionItem = accordionContent.closest('.accordion-item');
+            var accordionBtn = accordionItem.querySelector('.accordion-btn');
+            accordionContent.style.display = 'block'; // Abre el acordeón
+            accordionBtn.classList.add('active'); // Añade la clase activa
+
+            // Desplaza la página a la sección de reseñas
+            accordionContent.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
+    function toggleAccordion(button) {
+        var content = button.nextElementSibling;
+        if (content.style.display === 'block') {
+            content.style.display = 'none';
+            button.classList.remove('active');
+        } else {
+            content.style.display = 'block';
+            button.classList.add('active');
+        }
+    }
+
+    function closeModalCustom() {
+        var modal = document.getElementById('productModal');
+        modal.style.display = 'none';
+    }
