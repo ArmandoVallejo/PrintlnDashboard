@@ -316,9 +316,25 @@ main .new-users .user-list{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    gap: 1.4rem;
+    /*gap: 1.4rem;*/
     cursor: pointer;
     transition: all 0.3s ease;
+}
+main .new-users .user-list .image{
+    width: 50%;
+}
+main .new-users .user-list .caption{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.4rem;
+}
+main .new-users .user-list .caption .group{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
 }
 
 main .new-users .user-list:hover{
@@ -553,6 +569,8 @@ main .recent-orders a,.pagination{
         grid-template-columns: 7rem auto 23rem;
     }
 
+
+
     aside .logo h2{
         display: none;
     }
@@ -580,11 +598,12 @@ main .recent-orders a,.pagination{
     }
 
     main .recent-orders {
-        width: 94%;
-        position: absolute;
+        
+        position: relative;
+        /*width: 94%;
         left: 50%;
         transform: translateX(-50%);
-        margin: 2rem 0 0 0.8rem;
+        margin: 2rem 0 0 0.8rem;*/
     }
 
     main .recent-orders table{
@@ -608,6 +627,15 @@ main .recent-orders a,.pagination{
         width: 100%;
         grid-template-columns: 1fr;
         padding: 0 var(--padding-1);
+    }
+
+
+    main .new-users .user-list{
+        flex-direction: column;
+    }
+    main .new-users .user-list .image,
+    main .new-users .user-list .caption{
+        width: 100%;
     }
 
     aside{
