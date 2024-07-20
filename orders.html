@@ -18,10 +18,10 @@
     <script src="scripts.js"></script>
     <script>document.addEventListener('DOMContentLoaded', function () {
         const orders = [
-            { id: 1, product: 'Camiseta A', quantity: 2, customer: 'Juan Perez', date: '2024-07-01', status: 'Pendiente' },
-            { id: 2, product: 'Camiseta B', quantity: 1, customer: 'Ana Gomez', date: '2024-07-02', status: 'Entregado' },
-            { id: 3, product: 'Camiseta C', quantity: 3, customer: 'Carlos Lopez', date: '2024-07-03', status: 'Pendiente' },
-            { id: 4, product: 'Camiseta D', quantity: 5, customer: 'Maria Martinez', date: '2024-07-04', status: 'Entregado' },
+            { id: 1, idproduct: '1', quantity: 2, customer: 'Juan Perez', date: '2024-07-01', status: 'Pendiente', channel: 'Tienda Online', discount: 'Sí' },
+            { id: 2, idproduct: '3', quantity: 1, customer: 'Ana Gomez', date: '2024-07-02', status: 'Entregado', channel: 'Tienda Fisica', discount: 'Sí' },
+            { id: 3, idproduct: '5', quantity: 3, customer: 'Carlos Lopez', date: '2024-07-03', status: 'Pendiente', channel: 'Tienda Online', discount: 'No'  },
+            { id: 4, idproduct: '7', quantity: 5, customer: 'Maria Martinez', date: '2024-07-04', status: 'Entregado', channel: 'Tienda Fisica', discount: 'Sí' },
         ];
     
         const orderTable = document.getElementById('orderTable');
@@ -32,11 +32,13 @@
                 const row = document.createElement('tr');
                 row.innerHTML = `
                     <td>${order.id}</td>
-                    <td>${order.product}</td>
+                    <td>${order.idproduct}</td>
                     <td>${order.quantity}</td>
                     <td>${order.customer}</td>
                     <td>${order.date}</td>
                     <td class="${order.status === 'Pendiente' ? 'status-pending' : 'status-delivered'}">${order.status}</td>
+                    <td>${order.channel}</td>
+                    <td>${order.discount}</td>
                 `;
                 orderTable.appendChild(row);
             });
@@ -174,11 +176,13 @@
                         <thead class="thead-dark">
                             <tr>
                                 <th>ID de Orden</th>
-                                <th>Producto</th>
+                                <th>ID de Producto</th>
                                 <th>Cantidad</th>
                                 <th>Cliente</th>
                                 <th>Fecha</th>
                                 <th>Status</th>
+                                <th>Canal</th>
+                                <th>Descuento</th>
                             </tr>
                         </thead>
                         <tbody id="orderTable">
