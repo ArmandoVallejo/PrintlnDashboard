@@ -60,6 +60,7 @@ body{
     border-collapse: separate;
     border-spacing: 0 10px;
     background-color: white;
+    text-align: center;
 }
 
 .table th,
@@ -70,11 +71,11 @@ body{
 
 .table th {
     background-color: #343a40;
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
 .status-pending {
-    color: #ffc107;
+    color: #ffbf00;
 }
 
 .status-delivered {
