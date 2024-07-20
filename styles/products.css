@@ -222,6 +222,7 @@ aside .sidebar .message-count{
 
 main{
     margin-top: 1.4rem;
+    width: auto;
 }
 
 main .analyse{
@@ -609,6 +610,20 @@ main .recent-orders a{
         margin-bottom: 10px; /* Espacio entre los botones */
     }
 
+    #imgPreviews img {
+        max-width: 100px; /* Ajusta el tamaño según sea necesario */
+        margin: 5px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+    
+    #imgPreviews {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
     aside{
         position: fixed;
         background-color: var(--color-white);
@@ -643,6 +658,7 @@ main .recent-orders a{
         position: relative;
         padding-left: 50%;
         text-align: right;
+        width: auto;
     }
 
     td:before {
@@ -755,13 +771,14 @@ main .recent-orders a{
 
     .right-section .nav button span{
         font-size: 2rem;
+        display: flex;
     }
 
 }
 
 .employees-table {
     margin: 20px 0;
-    overflow-x: auto;
+    
 }
 
 table {
@@ -772,7 +789,6 @@ table {
     border: 2px solid #d1d1d1;
     box-shadow: 0 4px 16px rgba(0,0,0,0.1);
     border-radius: 10px;
-    overflow: hidden;
 }
 
 th, td {
@@ -866,10 +882,12 @@ button:hover {
 form {
     display: flex;
     flex-direction: column;
+    gap: 10px;
 }
 
 label {
-    margin-top: 10px;
+    font-weight: bold;
+    margin-bottom: 5px;
 }
 
 input {
@@ -885,6 +903,15 @@ input[type="date"],
 input[type="datetime-local"],
 input[type="password"],
 input[type="text"],
+input[type="file"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+}
 input[type="number"] {
     margin-bottom: 20px;
 }
@@ -900,4 +927,45 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
     background-color: #45a049;
+}
+
+tbody{
+    background-color: white;
+    
+}
+
+select.custom {
+    --size: 45px;
+    width: var(--size);
+    height: var(--size);
+    padding: 0;
+    border: 0;
+    background: none;
+    border-radius: 50%;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-align: center;
+    line-height: var(--size);
+  }
+  
+  select.custom option {
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 50%;
+  }
+  
+  select.custom:focus {
+    outline: none;
+    border: 3px solid #333;
+  }
+
+  select {
+    padding: 5px;
+    font-size: 16px;
+}
+
+option {
+    padding: 5px;
+    font-size: 16px;
 }

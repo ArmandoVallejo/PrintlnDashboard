@@ -176,58 +176,46 @@
                     <table>
                         <thead>
                             <tr>
-                                <th>Foto</th>
-                                <th>ID</th>
-                                <th>Nombre</th>
+                                <th>Foto | Categoría</th>
+                                <th>ID | Nombre</th>
                                 <th>Descripción</th>
-                                <th>Precio</th>
-                                <th>Stock</th>
-                                <th>Categoría</th>
+                                <th>Precio | Stock</th>
+                                <th>Color | Talla</th>
                                 <th>Fecha creación</th>
-                                <th>actualizacion prod</th>
-                                <th>ID Proveedor</th>
-                                <th>Status</th>
+                                <th>ajuste prod</th>
+                                <th>ID Proveedor | Status</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td data-label="Pic"><img src="img/NBA.jpg" alt="Profile Photo"></td>
-                                <td data-label="idProd">0</td>
-                                <td data-label="Name">Playera NBA</td>
+                                <td data-label="Pic|category"><img src="img/NBA.jpg" alt="Profile Photo">Deportes</td>
+                                <td data-label="idProd|Name">0 | Playera NBA</td>
                                 <td data-label="description">Playera Golden State Warriors hombre</td>
-                                <td data-label="price">450</td>
-                                <td data-label="stock">50</td>
-                                <td data-label="category">Deportes</td>
+                                <td data-label="price|Stock">450|50</td>
+                                <td data-label="color|Size">Azul|Grande</td>
                                 <td data-label="createdAt">2023-01-15 10:23:45</td>
                                 <td data-label="updated">2023-06-20 12:34:56</td>
-                                <td data-label="idSupplier">2</td>
-                                <td data-label="Status">Activo</td>
+                                <td data-label="idSupplier">2 | Activo</td>
                             </tr>
                             <tr>
-                                <td data-label="Pic"><img src="img/cuellov.jpg" alt="Profile Photo"></td>
-                                <td data-label="idProd">1</td>
-                                <td data-label="Name">Playera cuello V</td>
+                                <td data-label="Pic|category"><img src="img/cuellov.jpg" alt="Profile Photo">Casual</td>
+                                <td data-label="idProd">1 | Playera cuello V</td>
                                 <td data-label="description">Playera algodon cuello en V hombre</td>
-                                <td data-label="price">500</td>
-                                <td data-label="stock">105</td>
-                                <td data-label="category">Casual</td>
+                                <td data-label="price|Stock">500|105</td>
+                                <td data-label="color|Size">Blanco|Mediano</td>
                                 <td data-label="createdAt">2023-02-20 08:15:30</td>
                                 <td data-label="updated">2023-06-22 09:45:10</td>
-                                <td data-label="idSupplier">1</td>
-                                <td data-label="Status">Activo</td>
+                                <td data-label="idSupplier">1 | Activo</td>
                             </tr>
                             <tr>
-                                <td data-label="Pic"><img src="img/Polo.webp" alt="Profile Photo"></td>
-                                <td data-label="idProd">2</td>
-                                <td data-label="Name">Camisa Polo</td>
-                                <td data-label="description">CAmisa de algodón Hombre</td>
-                                <td data-label="price">650</td>
-                                <td data-label="stock">44</td>
-                                <td data-label="category">Formal</td>
+                                <td data-label="Pic|category"><img src="img/Polo.webp" alt="Profile Photo">Formal</td>
+                                <td data-label="idProd">2 | Camisa Polo</td>
+                                <td data-label="description">Camisa de algodón Hombre</td>
+                                <td data-label="price|Stock">650 | 44</td>
+                                <td data-label="color">Negro|Grande</td>
                                 <td data-label="createdAt">2023-03-10 14:05:25</td>
                                 <td data-label="updated">2023-07-01 11:12:45</td>
-                                <td data-label="idSupplier">0</td>
-                                <td data-label="Status">Activo</td>
+                                <td data-label="idSupplier|Status">0 | Activo</td>
                             </tr>
                             </tbody>
                     </table>
@@ -244,7 +232,7 @@
                     <span class="close-btn">&times;</span>
                     <form id="add-form">
                         <label for="add-idProd">ID del Producto:</label>
-                        <input type="text" id="add-idProd" name="idProd">
+                        <input type="number" id="add-idProd" name="idProd">
         
                         <label for="add-name">Nombre:</label>
                         <input type="text" id="add-name" name="name">
@@ -258,8 +246,37 @@
                         <label for="add-stock">Stock:</label>
                         <input type="number" id="add-stock" name="stock">
         
+                        <label for="add-color">Color:</label>
+                        <select id="add-color" name="color">
+                            <option value="">Selecciona un color</option>
+                            <option value="red" style="background-color: #ffcccc; color: #800000;">Rojo</option>
+                            <option value="green" style="background-color: #ccffcc; color: #006600;">Verde</option>
+                            <option value="blue" style="background-color: #ccccff; color: #000080;">Azul</option>
+                            <option value="yellow" style="background-color: #ffffcc; color: #808000;">Amarillo</option>
+                            <option value="purple" style="background-color: #e0ccff; color: #4b0082;">Púrpura</option>
+                            <option value="orange" style="background-color: #ffe5cc; color: #804000;">Naranja</option>
+                        </select>
+        
+                        <label for="add-Size">Talla:</label>
+                        <input type="text" id="add-size" name="size">
+        
                         <label for="add-category">Categoría:</label>
-                        <input type="text" id="add-category" name="category">
+                        <select id="add-category" name="category">
+                            <option value="">Selecciona una categoría</option>
+                            <option value="deportiva">Deportiva</option>
+                            <option value="casual">Casual</option>
+                            <option value="formal">Formal</option>
+                            <option value="vintage">Vintage</option>
+                            <option value="grafica">Gráfica</option>
+                            <option value="retro">Retro</option>
+                            <option value="tecnologica">Tecnológica</option>
+                            <option value="humoristica">Humorística</option>
+                            <option value="minimalista">Minimalista</option>
+                            <option value="arte">Arte</option>
+                            <option value="musica">Música</option>
+                            <option value="cultura-pop">Cultura Pop</option>
+                            <option value="personalizada">Personalizada</option>
+                        </select>
         
                         <label for="add-createdAt">Fecha de Creación (yyyy-mm-dd):</label>
                         <input type="date" id="add-createdAt" name="createdAt">
@@ -268,13 +285,13 @@
                         <input type="date" id="add-updatedAt" name="updatedAt">
         
                         <label for="add-idSupplier">ID del Proveedor:</label>
-                        <input type="text" id="add-idSupplier" name="idSupplier">
+                        <input type="number" id="add-idSupplier" name="idSupplier">
         
                         <label for="add-image">Imagen:</label>
-                        <input type="file" id="add-image" name="image" accept="image/*">
-                        <img id="add-image-preview" src="#" alt="Vista previa de la imagen" style="display:none; max-width: 100%; margin-top: 10px;">
+                        <input type="file" id="add-image" name="image" accept="image/*" multiple onchange="previewImages(event, '#imgPreviews')">
+                        
         
-                        <label for="add-status">Estado:</label>
+                        <label for="add-status">Status:</label>
                         <input type="text" id="add-status" name="status">
         
                         <button type="submit">Añadir</button>
@@ -287,7 +304,7 @@
                     <span class="close-btn">&times;</span>
                     <form id="edit-form">
                         <label for="edit-idProd">ID del Producto:</label>
-                        <input type="text" id="edit-idProd" name="idProd">
+                        <input type="number" id="edit-idProd" name="idProd">
         
                         <label for="edit-name">Nombre:</label>
                         <input type="text" id="edit-name" name="name">
@@ -301,8 +318,38 @@
                         <label for="edit-stock">Stock:</label>
                         <input type="number" id="edit-stock" name="stock">
         
+                        <label for="edit-color">Color:</label>
+                        <select id="edit-color" name="color">
+                            <option value="">Selecciona un color</option>
+                            <option value="red" style="background-color: #ffcccc; color: #800000;">Rojo</option>
+                            <option value="green" style="background-color: #ccffcc; color: #006600;">Verde</option>
+                            <option value="blue" style="background-color: #ccccff; color: #000080;">Azul</option>
+                            <option value="yellow" style="background-color: #ffffcc; color: #808000;">Amarillo</option>
+                            <option value="purple" style="background-color: #e0ccff; color: #4b0082;">Púrpura</option>
+                            <option value="orange" style="background-color: #ffe5cc; color: #804000;">Naranja</option>
+                        </select>
+                        
+        
+                        <label for="edit-Size">Talla:</label>
+                        <input type="text" id="edit-size" name="size">
+        
                         <label for="edit-category">Categoría:</label>
-                        <input type="text" id="edit-category" name="category">
+                        <select id="edit-category" name="category">
+                            <option value="">Selecciona una categoría</option>
+                            <option value="deportiva">Deportiva</option>
+                            <option value="casual">Casual</option>
+                            <option value="formal">Formal</option>
+                            <option value="vintage">Vintage</option>
+                            <option value="grafica">Gráfica</option>
+                            <option value="retro">Retro</option>
+                            <option value="tecnologica">Tecnológica</option>
+                            <option value="humoristica">Humorística</option>
+                            <option value="minimalista">Minimalista</option>
+                            <option value="arte">Arte</option>
+                            <option value="musica">Música</option>
+                            <option value="cultura-pop">Cultura Pop</option>
+                            <option value="personalizada">Personalizada</option>
+                        </select>
         
                         <label for="edit-createdAt">Fecha de Creación (yyyy-mm-dd):</label>
                         <input type="date" id="edit-createdAt" name="createdAt">
@@ -311,13 +358,13 @@
                         <input type="date" id="edit-updatedAt" name="updatedAt">
         
                         <label for="edit-idSupplier">ID del Proveedor:</label>
-                        <input type="text" id="edit-idSupplier" name="idSupplier">
+                        <input type="number" id="edit-idSupplier" name="idSupplier">
         
                         <label for="edit-image">Imagen:</label>
-                        <input type="file" id="edit-image" name="image" accept="image/*">
+                        <input type="file" id="edit-image" name="image" accept="image/*m"multiple>
                         <img id="edit-image-preview" src="#" alt="Vista previa de la imagen" style="display:none; max-width: 100%; margin-top: 10px;">
         
-                        <label for="edit-status">Estado:</label>
+                        <label for="edit-status">Status:</label>
                         <input type="text" id="edit-status" name="status">
         
                         <button type="submit">Editar</button>
@@ -380,8 +427,70 @@
 
             </div>
             <!-- End of Nav -->
+            <div class="user-profile">
+                <div class="logo">
+                    <img src="img/logo.jpeg">
+                    <h2>println</h2>
+                    <p>Fullstack Web Developer</p>
+                </div>
+            </div>
 
-            
+            <div class="reminders">
+                <div class="header">
+                    <h2>Recordatorios</h2>
+                    <span class="material-icons-sharp">
+                        notifications_none
+                    </span>
+                </div>
+
+                <div class="notification">
+                    <div class="icon">
+                        <span class="material-icons-sharp">
+                            volume_up
+                        </span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>Taller</h3>
+                            <small class="text_muted">
+                                08:00 AM - 12:00 PM
+                            </small>
+                        </div>
+                        <span class="material-icons-sharp">
+                            more_vert
+                        </span>
+                    </div>
+                </div>
+
+                <div class="notification deactive">
+                    <div class="icon">
+                        <span class="material-icons-sharp">
+                            edit
+                        </span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>Taller</h3>
+                            <small class="text_muted">
+                                08:00 AM - 12:00 PM
+                            </small>
+                        </div>
+                        <span class="material-icons-sharp">
+                            more_vert
+                        </span>
+                    </div>
+                </div>
+
+                <div class="notification add-reminder">
+                    <div>
+                        <span class="material-icons-sharp">
+                            add
+                        </span>
+                        <h3>Añadir recordatorio</h3>
+                    </div>
+                </div>
+
+            </div>
 
 
     </div>

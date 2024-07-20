@@ -175,8 +175,7 @@
                             <tr>
                                 <th>Foto</th>
                                 <th>ID</th>
-                                <th>Nombre</th>
-                                <th>Apellido</th>
+                                <th>Nombre Completo</th>
                                 <th>Dirección</th>
                                 <th>Correo</th>
                                 <th>Género</th>
@@ -189,10 +188,9 @@
                             <tr>
                                 <td data-label="Pic"><img src="img/profile-2.jpg" alt="Profile Photo"></td>
                                 <td data-label="idUser">0</td>
-                                <td data-label="Name">Juan</td>
-                                <td data-label="lastName">Pérez</td>
-                                <td data-label="address">Calle Falsa 123, Ciudad Ficticia, Estado Ejemplo, 12345</td>
-                                <td data-label="mail">juan.perez@example.com</td>
+                                <td data-label="Name">Juan Pérez López</td>
+                                <td data-label="address">AGS, Calle Falsa 123, Ciudad Ficticia, Estado Ejemplo, 12345</td>
+                                <td data-label="mail">juan. perez@ example.com</td>
                                 <td data-label="gender">Masculino</td>
                                 <td data-label="birthDate">1985-06-15</td>
                                 <td data-label="Phone">+34 600 123 456</td>
@@ -202,10 +200,9 @@
                             <tr>
                                 <td data-label="Pic"><img src="img/profile-1.jpg" alt="Profile Photo"></td>
                                 <td data-label="idUser">1</td>
-                                <td data-label="Name">María</td>
-                                <td data-label="lastName">García</td>
-                                <td data-label="address">Avenida Siempre Viva 742, Springfield, OR, 97477</td>
-                                <td data-label="mail">maria.garcia@example.com</td>
+                                <td data-label="Name">María García Medina</td>
+                                <td data-label="address">CDMX, Avenida Siempre Viva 742, Springfield, OR, 97477</td>
+                                <td data-label="mail">maria. garcia@ example.com</td>
                                 <td data-label="gender">femenino</td>
                                 <td data-label="birthDate">1990-04-22</td>
                                 <td data-label="Phone">+1 541 754 3010</td>
@@ -215,10 +212,9 @@
                             <tr>
                                 <td data-label="Pic"><img src="img/profile-3.jpg" alt="Profile Photo"></td>
                                 <td data-label="idUser">2</td>
-                                <td data-label="Name">Carlos</td>
-                                <td data-label="lastName">Sánchez</td>
-                                <td data-label="address">Rua dos Bobos, 0, São Paulo, SP, 01000-000</td>
-                                <td data-label="mail">carlos.sanchez@example.com</td>
+                                <td data-label="Name">Carlos Sánchez Ortega</td>
+                                <td data-label="address">Yucatánn, Rua dos Bobos, 0, São Paulo, SP, 01000-000</td>
+                                <td data-label="mail">carlos. sanchez@ example.com</td>
                                 <td data-label="gender">Masculino</td>
                                 <td data-label="birthDate">1978-11-30</td>
                                 <td data-label="Phone">+55 11 4002-8922</td>
@@ -246,14 +242,21 @@
                 <label for="add-name">Nombre:</label>
                 <input type="text" id="add-name" name="name">
 
-                <label for="add-lastname">Apellido:</label>
+                <label for="add-lastname">Apellido Paterno:</label>
                 <input type="text" id="add-lastname" name="lastname">
+
+                <label for="modify-lastname1">Apellido Materno:</label>
+                <input type="text" id="modify-lastname1" name="lastname1">
 
                 <label for="add-address">Dirección:</label>
                 <input type="text" id="add-address" name="address">
-
+                
                 <label for="add-gender">Género:</label>
-                <input type="text" id="add-gender" name="gender">
+                <select id="add-gender" name="gender">
+                    <option value="">Selecciona un género</option>
+                    <option value="male">Masculino</option>
+                    <option value="female">Femenino</option>
+                </select>
 
                 <label for="add-password">Contraseña:</label>
                 <input type="password" id="add-password" name="password">
@@ -285,14 +288,21 @@
                 <label for="modify-name">Nombre:</label>
                 <input type="text" id="modify-name" name="name">
 
-                <label for="modify-lastname">Apellido:</label>
+                <label for="modify-lastname">Apellido Paterno:</label>
                 <input type="text" id="modify-lastname" name="lastname">
+                
+                <label for="modify-lastname1">Apellido Materno:</label>
+                <input type="text" id="modify-lastname1" name="lastname1">
 
                 <label for="modify-address">Dirección:</label>
                 <input type="text" id="modify-address" name="address">
 
                 <label for="modify-gender">Género:</label>
-                <input type="text" id="modify-gender" name="gender">
+                <select id="modify-gender" name="gender">
+                    <option value="">Selecciona un género</option>
+                    <option value="male">Masculino</option>
+                    <option value="female">Femenino</option>
+                </select>
 
                 <label for="modify-password">Contraseña:</label>
                 <input type="password" id="modify-password" name="password">
@@ -364,7 +374,70 @@
 
             </div>
             <!-- End of Nav -->
+            <div class="user-profile">
+                <div class="logo">
+                    <img src="img/logo.jpeg">
+                    <h2>println</h2>
+                    <p>Fullstack Web Developer</p>
+                </div>
+            </div>
 
+            <div class="reminders">
+                <div class="header">
+                    <h2>Recordatorios</h2>
+                    <span class="material-icons-sharp">
+                        notifications_none
+                    </span>
+                </div>
+
+                <div class="notification">
+                    <div class="icon">
+                        <span class="material-icons-sharp">
+                            volume_up
+                        </span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>Taller</h3>
+                            <small class="text_muted">
+                                08:00 AM - 12:00 PM
+                            </small>
+                        </div>
+                        <span class="material-icons-sharp">
+                            more_vert
+                        </span>
+                    </div>
+                </div>
+
+                <div class="notification deactive">
+                    <div class="icon">
+                        <span class="material-icons-sharp">
+                            edit
+                        </span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>Taller</h3>
+                            <small class="text_muted">
+                                08:00 AM - 12:00 PM
+                            </small>
+                        </div>
+                        <span class="material-icons-sharp">
+                            more_vert
+                        </span>
+                    </div>
+                </div>
+
+                <div class="notification add-reminder">
+                    <div>
+                        <span class="material-icons-sharp">
+                            add
+                        </span>
+                        <h3>Añadir recordatorio</h3>
+                    </div>
+                </div>
+
+            </div>
             
 
             
