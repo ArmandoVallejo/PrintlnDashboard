@@ -284,9 +284,16 @@
     
                 <label for="add-mail">Correo:</label>
                 <input type="email" id="add-mail" name="mail">
-    
+
+                <label for="modify-mail">Contraseña:</label>
+                <input type="email" id="modify-mail" name="mail">
+                
                 <label for="add-gender">Género:</label>
-                <input type="text" id="add-gender" name="gender">
+                <select id="add-gender" name="gender">
+                    <option value="">Selecciona un género</option>
+                    <option value="male">Masculino</option>
+                    <option value="female">Femenino</option>
+                </select>
     
                 <label for="add-birthDate">Fecha de Nacimiento (yyyy-mm-dd):</label>
                 <input type="date" id="add-birthDate" name="birthDate">
@@ -294,8 +301,15 @@
                 <label for="add-phone">Teléfono:</label>
                 <input type="text" id="add-phone" name="phone">
     
-                <label for="add-job">Puesto de Trabajo:</label>
-                <input type="text" id="add-job" name="job">
+                <label for="add-gender" >Puesto de trabajo:</label>
+                <select id="add-gender" name="gender" >
+                    <option value="">Selecciona un Puesto</option>
+                    <option value="male">Gerente</option>
+                    <option value="male">Asesor de ventas</option>
+                    <option value="male">Almacenista</option>
+                    <option value="male">Ing. de desarollo</option>
+                    <option value="male">Ing. Textil</option>
+                </select>
     
                 <label for="add-photo">Foto:</label>
                 <input type="file" id="add-photo" name="photo" accept="image/*">
@@ -320,9 +334,16 @@
     
                 <label for="modify-mail">Correo:</label>
                 <input type="email" id="modify-mail" name="mail">
-    
-                <label for="modify-gender">Género:</label>
-                <input type="text" id="modify-gender" name="gender">
+
+                <label for="modify-mail">Contraseña:</label>
+                <input type="email" id="modify-mail" name="mail">
+                
+                <label for="add-gender">Género:</label>
+                <select id="add-gender" name="gender">
+                    <option value="">Selecciona un género</option>
+                    <option value="male">Masculino</option>
+                    <option value="female">Femenino</option>
+                </select>
     
                 <label for="modify-birthDate">Fecha de Nacimiento (yyyy-mm-dd):</label>
                 <input type="date" id="modify-birthDate" name="birthDate">
@@ -330,8 +351,15 @@
                 <label for="modify-phone">Teléfono:</label>
                 <input type="text" id="modify-phone" name="phone">
     
-                <label for="modify-job">Puesto de Trabajo:</label>
-                <input type="text" id="modify-job" name="job">
+                <label for="add-gender" >Puesto de trabajo:</label>
+                <select id="add-gender" name="gender" >
+                    <option value="">Selecciona un Puesto</option>
+                    <option value="male">Gerente</option>
+                    <option value="male">Asesor de ventas</option>
+                    <option value="male">Almacenista</option>
+                    <option value="male">Ing. de desarollo</option>
+                    <option value="male">Ing. Textil</option>
+                </select>
     
                 <label for="modify-photo">Foto:</label>
                 <input type="file" id="modify-photo" name="photo" accept="image/*">
@@ -340,7 +368,20 @@
             </form>
         </div>
     </div>
-    
+    <div id="delete-user-form" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <form>
+                <label for="delete-user-id">Nombre del empleado:</label>
+                <input type="text" id="delete-user-id" name="user-id">
+
+                <label for="delete-user-email">Correo del empleado:</label>
+                <input type="email" id="delete-user-email" name="user-email">
+
+                <button type="submit">Eliminar</button>
+            </form>
+        </div>
+    </div>
 </main>
 <!-- End of Main Content -->
 
